@@ -1,0 +1,1952 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMCLA Annual Chorus Retreat 2027 • Camp Bob Waldorf</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gmcla: {
+                            gold: '#F59E0B',
+                            red: '#EF4444',
+                            purple: '#8B5CF6',
+                            violet: '#6D28D9',
+                            blue: '#3B82F6',
+                            teal: '#10B981',
+                            dark: '#090D16',
+                            card: '#131B2E',
+                            border: '#2A364F'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #090D16; }
+        ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+        .rainbow-border { background: linear-gradient(90deg, #EF4444, #F59E0B, #10B981, #3B82F6, #8B5CF6); }
+        .rainbow-text {
+            background: linear-gradient(135deg, #F59E0B 0%, #EF4444 35%, #8B5CF6 70%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(19, 27, 46, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-[#090D16] text-slate-100 font-sans antialiased selection:bg-purple-600 selection:text-white min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-40 w-full glass-panel border-b border-slate-800/80 transition-all duration-300" id="main-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand / Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-2xl rainbow-border p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
+                        <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
+                            <i class="fa-solid text-xl text-amber-400 fa-music"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight font-heading block leading-none">GMCLA</span>
+                        <span class="text-xs text-amber-400 font-semibold tracking-wider uppercase">Retreat 2027 • Glendale</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center space-x-1 font-medium text-sm">
+                    <a href="#overview" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Overview</a>
+                    <a href="#gallery" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Photo Gallery</a>
+                    <a href="#cabins" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Cabins & Rates</a>
+                    <a href="#map" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Camp Map</a>
+                    <a href="#passes" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Day Passes</a>
+                    <a href="#itinerary" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Itinerary</a>
+                    <a href="#faq" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition">FAQ</a>
+                    <button onclick="openSheetsModal()" class="px-3 py-2 rounded-lg text-emerald-400 hover:text-emerald-300 hover:bg-slate-800/60 transition flex items-center gap-1.5 text-xs font-semibold border border-emerald-500/30">
+                        <i class="fa-solid fa-table"></i> Google Sheets DB
+                    </button>
+                    <a href="#register" class="ml-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 hover:opacity-95 text-slate-950 font-bold transition shadow-lg shadow-amber-500/20 hover:scale-105">
+                        Register Now
+                    </a>
+                </nav>
+
+                <!-- Mobile menu toggle -->
+                <div class="lg:hidden flex items-center space-x-2">
+                    <button onclick="openSheetsModal()" class="text-emerald-400 p-2 rounded-xl bg-slate-800/60 border border-emerald-500/30 text-xs">
+                        <i class="fa-solid fa-table"></i>
+                    </button>
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" type="button" class="text-slate-300 hover:text-white p-2.5 rounded-xl bg-slate-800/60 border border-slate-700" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-slate-950 px-4 pt-3 pb-6 space-y-2">
+            <a href="#overview" onclick="toggleMobileMenu()" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white font-medium">Overview</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white font-medium">Photo Gallery</a>
+            <a href="#cabins" onclick="toggleMobileMenu()" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white font-medium">Cabins & Lodging</a>
+            <a href="#map" onclick="toggleMobileMenu()" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white font-medium">Camp Map & Grounds</a>
+            <a href="#passes" onclick="toggleMobileMenu()" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white font-medium">Day Passes</a>
+            <a href="#itinerary" onclick="toggleMobileMenu()" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white font-medium">Itinerary</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white font-medium">FAQ</a>
+            <button onclick="openSheetsModal(); toggleMobileMenu();" class="w-full text-left px-4 py-2.5 rounded-lg text-emerald-400 hover:bg-slate-800 font-semibold flex items-center gap-2">
+                <i class="fa-solid fa-table"></i> Connect Google Sheets Database
+            </button>
+            <a href="#register" onclick="toggleMobileMenu()" class="mobile-nav-link block mt-4 px-4 py-3 rounded-xl bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 text-slate-950 text-center font-extrabold">Register Now</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="overview" class="relative overflow-hidden pt-10 pb-20 md:pt-16 md:pb-28">
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-purple-600/15 blur-[140px] rounded-full pointer-events-none"></div>
+            <div class="absolute top-1/3 left-1/4 w-[450px] h-[450px] bg-amber-500/15 blur-[120px] rounded-full pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-4xl mx-auto">
+                    
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-slate-900/90 border border-slate-700/80 text-amber-400 text-xs sm:text-sm font-semibold tracking-wide uppercase mb-6 shadow-inner">
+                        <span>❤️ Sing on family...</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-black font-heading tracking-tight mb-6 leading-tight">
+                        GMCLA Chorus Retreat <br class="hidden sm:inline"/>
+                        <span class="rainbow-text">March 5 – 7, 2027</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-2xl font-medium text-slate-200 mb-4 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-location-dot text-rose-500"></i>
+                        <span>Camp Bob Waldorf • Glendale, CA</span>
+                    </p>
+
+                    <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+                        Gather with your Chorus Family in Glendale for a fun filled weekend of bonding, shared meals, rehearsals, relaxation, and our famous Saturday Night No-Talent Talent Show!
+                    </p>
+
+                    <div class="flex flex-wrap justify-center gap-3 text-sm font-medium text-slate-300 mb-10">
+                        <div class="flex items-center space-x-2 bg-slate-900/90 px-4 py-2.5 rounded-xl border border-slate-800">
+                            <i class="fa-regular fa-calendar text-amber-400"></i>
+                            <span>Friday, Mar 5 – Sunday, Mar 7</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-slate-900/90 px-4 py-2.5 rounded-xl border border-slate-800">
+                            <i class="fa-solid fa-tree text-emerald-400"></i>
+                            <span>Camp Bob Waldorf (Glendale)</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+                        <a href="#register" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 hover:opacity-95 text-slate-950 font-black text-lg shadow-xl shadow-amber-500/10 transition-all hover:scale-105">
+                            <i class="fa-solid fa-pen-to-square mr-2"></i> Register Now
+                        </a>
+                        <a href="#map" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-lg border border-slate-700 transition-all hover:scale-105">
+                            <i class="fa-solid fa-map-location-dot mr-2 text-amber-400"></i> Explore Camp Map
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PHOTO GALLERY SECTION -->
+        <section id="gallery" class="py-20 bg-slate-900/40 border-t border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="text-purple-400 text-xs font-bold uppercase tracking-widest">Explore Camp Bob Waldorf</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-heading mt-2 mb-4">Retreat Photo Gallery</h2>
+                    <p class="text-slate-400">Take a tour of our cabin accommodations, camp common grounds, and favorite moments from past GMCLA retreats.</p>
+                </div>
+
+                <!-- Main Category Tabs -->
+                <div class="flex flex-wrap justify-center gap-2 mb-8 p-1.5 bg-slate-950 rounded-2xl border border-slate-800 max-w-2xl mx-auto">
+                    <button onclick="switchGalleryCategory('cabins')" id="cat-tab-cabins" class="gallery-cat-tab flex-1 min-w-[140px] py-2.5 px-4 rounded-xl font-bold text-xs sm:text-sm bg-gradient-to-r from-amber-500 to-rose-500 text-slate-950 shadow-md">
+                        <i class="fa-solid fa-house-chimney mr-1.5"></i> Cabin Photos
+                    </button>
+                    <button onclick="switchGalleryCategory('common')" id="cat-tab-common" class="gallery-cat-tab flex-1 min-w-[140px] py-2.5 px-4 rounded-xl font-bold text-xs sm:text-sm text-slate-400 hover:text-white">
+                        <i class="fa-solid fa-tree mr-1.5"></i> Common Areas & Activities
+                    </button>
+                    <button onclick="switchGalleryCategory('past')" id="cat-tab-past" class="gallery-cat-tab flex-1 min-w-[140px] py-2.5 px-4 rounded-xl font-bold text-xs sm:text-sm text-slate-400 hover:text-white">
+                        <i class="fa-solid fa-camera-retro mr-1.5"></i> Retreats of Years Past
+                    </button>
+                </div>
+
+                <!-- CATEGORY 1: CABIN PHOTOS -->
+                <div id="gallery-category-cabins" class="gallery-category-panel space-y-8">
+                    <!-- Sub-section selector for Cabins -->
+                    <div class="flex flex-wrap justify-center gap-2 text-xs font-medium border-b border-slate-800 pb-4">
+                        <button onclick="filterCabinSub('all')" class="cabin-sub-btn px-3 py-1.5 rounded-lg bg-slate-800 text-amber-400 font-bold border border-slate-700">All Cabins</button>
+                        <button onclick="filterCabinSub('powhatan')" class="cabin-sub-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">Powhatan</button>
+                        <button onclick="filterCabinSub('shoshone')" class="cabin-sub-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">Shoshone</button>
+                        <button onclick="filterCabinSub('iroquois')" class="cabin-sub-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">Iroquois</button>
+                        <button onclick="filterCabinSub('wangari')" class="cabin-sub-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">Wangari</button>
+                        <button onclick="filterCabinSub('sequoia')" class="cabin-sub-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">Sequoia</button>
+                        <button onclick="filterCabinSub('aztec')" class="cabin-sub-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">Aztec</button>
+                        <button onclick="filterCabinSub('tongva')" class="cabin-sub-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">Tongva</button>
+                        <button onclick="filterCabinSub('witherbee')" class="cabin-sub-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">Witherbee Wolf Den</button>
+                        <button onclick="filterCabinSub('teencenter')" class="cabin-sub-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">Teen Center Rooms</button>
+                        <button onclick="filterCabinSub('crow')" class="cabin-sub-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">Crow</button>
+                        <button onclick="filterCabinSub('oaks2')" class="cabin-sub-btn px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">The Oaks 2</button>
+                    </div>
+
+                    <!-- Photo Grid Container -->
+                    <div id="cabin-gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Powhatan -->
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="powhatan" onclick="openLightbox('Powhatan Cabin', 'Powhatan/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
+                                <img src="Powhatan/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-house-chimney text-4xl mb-2 text-amber-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">Powhatan Folder</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Powhatan Cabin</h4>
+                                    <p class="text-xs text-slate-400">Standard Tier • 14 Beds</p>
+                                </div>
+                                <span class="text-xs text-amber-400 font-semibold">View Photos</span>
+                            </div>
+                        </div>
+
+                        <!-- Shoshone -->
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="shoshone" onclick="openLightbox('Shoshone Cabin', 'Shoshone/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
+                                <img src="Shoshone/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-house-chimney text-4xl mb-2 text-amber-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">Shoshone Folder</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Shoshone Cabin</h4>
+                                    <p class="text-xs text-slate-400">Standard Tier • 14 Beds</p>
+                                </div>
+                                <span class="text-xs text-amber-400 font-semibold">View Photos</span>
+                            </div>
+                        </div>
+
+                        <!-- Iroquois -->
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-purple-500/50 transition cursor-pointer" data-sub="iroquois" onclick="openLightbox('Iroquois Cabin (Substance-Free)', 'Iroquois/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-purple-400 transition relative">
+                                <img src="Iroquois/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-house-chimney text-4xl mb-2 text-purple-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">Iroquois Folder</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Iroquois Cabin</h4>
+                                    <p class="text-xs text-slate-400">Standard Tier • Substance-Free</p>
+                                </div>
+                                <span class="text-xs text-purple-400 font-semibold">View Photos</span>
+                            </div>
+                        </div>
+
+                        <!-- Wangari -->
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="wangari" onclick="openLightbox('Wangari Cabin', 'Wangari/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
+                                <img src="Wangari/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-house-chimney text-4xl mb-2 text-amber-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">Wangari Folder</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Wangari Cabin</h4>
+                                    <p class="text-xs text-slate-400">Standard Tier • 20 Beds</p>
+                                </div>
+                                <span class="text-xs text-amber-400 font-semibold">View Photos</span>
+                            </div>
+                        </div>
+
+                        <!-- Sequoia -->
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="sequoia" onclick="openLightbox('Sequoia Cabin', 'Sequoia/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
+                                <img src="Sequoia/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-house-chimney text-4xl mb-2 text-amber-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">Sequoia Folder</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Sequoia Cabin</h4>
+                                    <p class="text-xs text-slate-400">Standard Tier • 20 Beds</p>
+                                </div>
+                                <span class="text-xs text-amber-400 font-semibold">View Photos</span>
+                            </div>
+                        </div>
+
+                        <!-- Aztec -->
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" data-sub="aztec" onclick="openLightbox('Aztec Cabin', 'Aztec/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-emerald-400 transition relative">
+                                <img src="Aztec/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-house-chimney text-4xl mb-2 text-emerald-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">Aztec Folder</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Aztec Cabin</h4>
+                                    <p class="text-xs text-slate-400">Cabin Plus • Attached Bathroom</p>
+                                </div>
+                                <span class="text-xs text-emerald-400 font-semibold">View Photos</span>
+                            </div>
+                        </div>
+
+                        <!-- Tongva -->
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" data-sub="tongva" onclick="openLightbox('Tongva Cabin', 'Tongva/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-emerald-400 transition relative">
+                                <img src="Tongva/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-house-chimney text-4xl mb-2 text-emerald-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">Tongva Folder</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Tongva Cabin</h4>
+                                    <p class="text-xs text-slate-400">Cabin Plus • Attached Bathroom</p>
+                                </div>
+                                <span class="text-xs text-emerald-400 font-semibold">View Photos</span>
+                            </div>
+                        </div>
+
+                        <!-- Witherbee Wolf Den -->
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-rose-500/50 transition cursor-pointer" data-sub="witherbee" onclick="openLightbox('Witherbee Wolf Den', 'Witherbee Wolf Den/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-rose-400 transition relative">
+                                <img src="Witherbee Wolf Den/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-house-chimney text-4xl mb-2 text-rose-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">Witherbee Wolf Den Folder</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Witherbee Wolf Den</h4>
+                                    <p class="text-xs text-slate-400">Multi-Room Lodge Tier</p>
+                                </div>
+                                <span class="text-xs text-rose-400 font-semibold">View Photos</span>
+                            </div>
+                        </div>
+
+                        <!-- Teen Center Rooms -->
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-purple-500/50 transition cursor-pointer" data-sub="teencenter" onclick="openLightbox('Teen Center Rooms', 'Teen Center Rooms/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-purple-400 transition relative">
+                                <img src="Teen Center Rooms/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-bed text-4xl mb-2 text-purple-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">Teen Center Rooms Folder</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Teen Center Rooms</h4>
+                                    <p class="text-xs text-slate-400">Semi-Private Basic Wing</p>
+                                </div>
+                                <span class="text-xs text-purple-400 font-semibold">View Photos</span>
+                            </div>
+                        </div>
+
+                        <!-- Crow -->
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="crow" onclick="openLightbox('Crow Cabin', 'Crow/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
+                                <img src="Crow/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-house-chimney text-4xl mb-2 text-amber-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">Crow Folder</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Crow Cabin</h4>
+                                    <p class="text-xs text-slate-400">Staff & Leader Lodging</p>
+                                </div>
+                                <span class="text-xs text-amber-400 font-semibold">View Photos</span>
+                            </div>
+                        </div>
+
+                        <!-- The Oaks 2 -->
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-sky-500/50 transition cursor-pointer" data-sub="oaks2" onclick="openLightbox('The Oaks 2', 'The Oaks 2/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-sky-400 transition relative">
+                                <img src="The Oaks 2/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-tree text-4xl mb-2 text-sky-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">The Oaks 2 Folder</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">The Oaks 2</h4>
+                                    <p class="text-xs text-slate-400">Lodge Accommodations</p>
+                                </div>
+                                <span class="text-xs text-sky-400 font-semibold">View Photos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 2: CAMP COMMON AREAS & ACTIVITIES -->
+                <div id="gallery-category-common" class="gallery-category-panel hidden space-y-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" onclick="openLightbox('Common Areas', 'Common Areas/1.jpg')">
+                            <div class="h-56 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
+                                <img src="Common Areas/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-utensils text-5xl mb-3 text-amber-400/60"></i>
+                                    <span class="text-sm font-semibold text-slate-300">Common Areas Folder</span>
+                                </div>
+                            </div>
+                            <div class="p-5 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-base font-bold text-white">Common Areas</h4>
+                                    <p class="text-xs text-slate-400">Dining Hall, MAC Rehearsal Center & Grounds</p>
+                                </div>
+                                <span class="text-xs text-amber-400 font-semibold">View Folder Photos</span>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" onclick="openLightbox('Camp Activities', 'Camp Activities/1.jpg')">
+                            <div class="h-56 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-emerald-400 transition relative">
+                                <img src="Camp Activities/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-icons text-5xl mb-3 text-emerald-400/60"></i>
+                                    <span class="text-sm font-semibold text-slate-300">Camp Activities Folder</span>
+                                </div>
+                            </div>
+                            <div class="p-5 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-base font-bold text-white">Camp Activities</h4>
+                                    <p class="text-xs text-slate-400">Sports, Games, Parties & Talent Shows</p>
+                                </div>
+                                <span class="text-xs text-emerald-400 font-semibold">View Folder Photos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 3: RETREATS OF YEARS PAST -->
+                <div id="gallery-category-past" class="gallery-category-panel hidden space-y-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" onclick="openLightbox('2023 Group Photos', '2023 Group Photos/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
+                                <img src="2023 Group Photos/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-users text-4xl mb-2 text-amber-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">2023 Group Photos</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80">
+                                <h4 class="text-sm font-bold text-white">2023 Retreat Highlights</h4>
+                                <p class="text-xs text-slate-400">Memories from 2023</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" onclick="openLightbox('2024 Group Photos', '2024 Group Photos/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-emerald-400 transition relative">
+                                <img src="2024 Group Photos/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-users text-4xl mb-2 text-emerald-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">2024 Group Photos</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80">
+                                <h4 class="text-sm font-bold text-white">2024 Retreat Highlights</h4>
+                                <p class="text-xs text-slate-400">Memories from 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-sky-500/50 transition cursor-pointer" onclick="openLightbox('2025 Group Photos', '2025 Group Photos/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-sky-400 transition relative">
+                                <img src="2025 Group Photos/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-users text-4xl mb-2 text-sky-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">2025 Group Photos</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80">
+                                <h4 class="text-sm font-bold text-white">2025 Retreat Highlights</h4>
+                                <p class="text-xs text-slate-400">Memories from 2025</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-purple-500/50 transition cursor-pointer" onclick="openLightbox('2026 Group Photos', '2026 Group Photos/1.jpg')">
+                            <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-purple-400 transition relative">
+                                <img src="2026 Group Photos/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
+                                    <i class="fa-solid fa-users text-4xl mb-2 text-purple-400/60"></i>
+                                    <span class="text-xs font-semibold text-slate-300">2026 Group Photos</span>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-950/80">
+                                <h4 class="text-sm font-bold text-white">2026 Retreat Highlights</h4>
+                                <p class="text-xs text-slate-400">Memories from 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Image Lightbox Modal -->
+        <div id="gallery-lightbox" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4" onclick="closeLightbox()">
+            <div class="max-w-4xl w-full bg-slate-900 border border-slate-700 rounded-3xl p-4 sm:p-6 space-y-4 relative" onclick="event.stopPropagation()">
+                <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                    <h3 id="lightbox-title" class="text-lg font-bold text-white font-heading">Photo View</h3>
+                    <button onclick="closeLightbox()" class="text-slate-400 hover:text-white text-xl p-1">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="rounded-2xl overflow-hidden bg-slate-950 min-h-[300px] max-h-[70vh] flex items-center justify-center p-4">
+                    <img id="lightbox-img" src="" alt="Gallery Image" class="max-w-full max-h-[65vh] object-contain rounded-xl hidden" />
+                    <div id="lightbox-placeholder" class="text-center p-8 text-slate-500">
+                        <i class="fa-solid fa-folder-open text-5xl mb-3 text-amber-400/60"></i>
+                        <p id="lightbox-placeholder-text" class="text-sm font-medium text-slate-300">Photo folder path ready to load.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="cabins" class="py-20 bg-slate-950/70 border-y border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-amber-400 text-xs font-bold uppercase tracking-widest">Camp Bob Waldorf Lodging</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-heading mt-2 mb-4">Cabin Structure & Room Tiers</h2>
+                    <p class="text-slate-400">Choose the lodging level that best fits your needs. All rates are per person and include full weekend retreat programming and all meals.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Standard Cabins ($190/person) -->
+                    <div class="glass-panel rounded-3xl p-6 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <span class="text-xs font-bold uppercase px-3 py-1 rounded-full bg-slate-800 text-amber-400 border border-slate-700">Standard Tier</span>
+                                    <h3 class="text-2xl font-extrabold font-heading text-white mt-2">Standard Cabins</h3>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-2xl font-black text-amber-400">$190</span>
+                                    <span class="block text-[10px] text-slate-400 uppercase font-semibold">/ person</span>
+                                </div>
+                            </div>
+                            
+                            <p class="text-slate-300 text-sm mb-4 leading-relaxed">Classic shared camp cabins with bunk accommodations. Detached communal restrooms and shower houses located nearby.</p>
+                            
+                            <div class="space-y-3 mb-6 bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+                                <h4 class="text-xs uppercase font-bold text-slate-400 flex items-center justify-between">
+                                    <span><i class="fa-solid fa-list-ul mr-2 text-amber-400"></i> Available Cabins:</span>
+                                </h4>
+                                <ul class="space-y-2 text-xs text-slate-300">
+                                    <li class="flex justify-between items-center border-b border-slate-800/80 pb-1.5">
+                                        <span class="font-medium">Powhatan</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">14 Beds</span>
+                                    </li>
+                                    <li class="flex justify-between items-center border-b border-slate-800/80 pb-1.5">
+                                        <span class="font-medium">Shoshone</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">14 Beds</span>
+                                    </li>
+                                    <li class="flex justify-between items-center border-b border-slate-800/80 pb-1.5">
+                                        <span class="font-medium">Iroquois (Alcohol & Substance-Free)</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">14 Beds</span>
+                                    </li>
+                                    <li class="flex justify-between items-center border-b border-slate-800/80 pb-1.5">
+                                        <span class="font-medium">Wangari</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">20 Beds</span>
+                                    </li>
+                                    <li class="flex justify-between items-center">
+                                        <span class="font-medium">Sequoia</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">20 Beds</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a href="#register" onclick="selectTierInForm('standard')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-400 font-semibold text-sm transition text-center border border-slate-700 block">
+                            Select Standard ($190/person)
+                        </a>
+                    </div>
+
+                    <!-- Cabin Plus ($210/person) -->
+                    <div class="glass-panel rounded-3xl p-6 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <span class="text-xs font-bold uppercase px-3 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800">Attached Restroom</span>
+                                    <h3 class="text-2xl font-extrabold font-heading text-white mt-2">Cabin Plus</h3>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-2xl font-black text-emerald-400">$210</span>
+                                    <span class="block text-[10px] text-slate-400 uppercase font-semibold">/ person</span>
+                                </div>
+                            </div>
+                            
+                            <p class="text-slate-300 text-sm mb-4 leading-relaxed">Spacious lodge style cabins featuring the convenience of attached restrooms directly inside the cabin.</p>
+                            
+                            <div class="space-y-3 mb-6 bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+                                <h4 class="text-xs uppercase font-bold text-slate-400 flex items-center justify-between">
+                                    <span><i class="fa-solid fa-list-ul mr-2 text-emerald-400"></i> Available Cabins:</span>
+                                </h4>
+                                <ul class="space-y-2 text-xs text-slate-300">
+                                    <li class="border-b border-slate-800/80 pb-2 flex justify-between items-center">
+                                        <div>
+                                            <div class="font-medium">Aztec</div>
+                                            <div class="text-[10px] text-slate-400">Attached restroom inside cabin</div>
+                                        </div>
+                                        <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">15 Beds</span>
+                                    </li>
+                                    <li class="flex justify-between items-center pt-1">
+                                        <div>
+                                            <div class="font-medium">Tongva</div>
+                                            <div class="text-[10px] text-slate-400">Attached restroom inside cabin</div>
+                                        </div>
+                                        <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">15 Beds</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a href="#register" onclick="selectTierInForm('plus')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-400 font-semibold text-sm transition text-center border border-slate-700 block">
+                            Select Cabin Plus ($210/person)
+                        </a>
+                    </div>
+
+                    <!-- Witherbee Wolfe Den ($230/person) -->
+                    <div class="glass-panel rounded-3xl p-6 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <span class="text-xs font-bold uppercase px-3 py-1 rounded-full bg-rose-950 text-rose-400 border border-rose-800">Smaller Rooms</span>
+                                    <h3 class="text-2xl font-extrabold font-heading text-white mt-2">Witherbee Wolfe Den</h3>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-2xl font-black text-rose-400">$230</span>
+                                    <span class="block text-[10px] text-slate-400 uppercase font-semibold">/ person</span>
+                                </div>
+                            </div>
+                            
+                            <p class="text-slate-300 text-sm mb-4 leading-relaxed">Cozy multi-room lodge configuration featuring smaller single bed rooms for added privacy and lower capacity.</p>
+                            
+                            <div class="space-y-3 mb-6 bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+                                <h4 class="text-xs uppercase font-bold text-slate-400 flex items-center justify-between">
+                                    <span><i class="fa-solid fa-bed mr-2 text-rose-400"></i> Room Breakdown:</span>
+                                </h4>
+                                <ul class="space-y-2 text-xs text-slate-300">
+                                    <li class="flex justify-between items-center border-b border-slate-800/80 pb-1.5">
+                                        <span class="font-medium">Room 1 (Must reserve full room)</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">3 Beds</span>
+                                    </li>
+                                    <li class="flex justify-between items-center border-b border-slate-800/80 pb-1.5">
+                                        <span class="font-medium">Room 2</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">5 Beds</span>
+                                    </li>
+                                    <li class="flex justify-between items-center">
+                                        <span class="font-medium">Room 3</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">7 Beds</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a href="#register" onclick="selectTierInForm('witherbee')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-rose-400 font-semibold text-sm transition text-center border border-slate-700 block">
+                            Select Witherbee Den ($230/person)
+                        </a>
+                    </div>
+
+                    <!-- Semi-Private Basic ($260/person) -->
+                    <div class="glass-panel rounded-3xl p-6 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <span class="text-xs font-bold uppercase px-3 py-1 rounded-full bg-purple-950 text-purple-400 border border-purple-800">Teen Center Wing</span>
+                                    <h3 class="text-2xl font-extrabold font-heading text-white mt-2">Semi-Private Basic</h3>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-2xl font-black text-purple-400">$260</span>
+                                    <span class="block text-[10px] text-slate-400 uppercase font-semibold">/ person</span>
+                                </div>
+                            </div>
+                            
+                            <p class="text-slate-300 text-sm mb-4 leading-relaxed">Attached to the Teen Center complex. Features small 2-3 bed rooms reserved as a unit with access to remote restrooms.</p>
+                            
+                            <div class="space-y-3 mb-6 bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+                                <h4 class="text-xs uppercase font-bold text-slate-400 flex items-center justify-between">
+                                    <span><i class="fa-solid fa-door-closed mr-2 text-purple-400"></i> Room Breakdown:</span>
+                                </h4>
+                                <ul class="space-y-2 text-xs text-slate-300">
+                                    <li class="flex justify-between items-center border-b border-slate-800/80 pb-1.5">
+                                        <span class="font-medium">Room 1 (Remote Bath - Must reserve full room)</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">3 Beds</span>
+                                    </li>
+                                    <li class="flex justify-between items-center border-b border-slate-800/80 pb-1.5">
+                                        <span class="font-medium">Room 2 (Remote Bath - Must reserve full room)</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">2 Beds</span>
+                                    </li>
+                                    <li class="flex justify-between items-center">
+                                        <span class="font-medium">Room 3 (Remote Bath - Must reserve full room)</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">2 Beds</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a href="#register" onclick="selectTierInForm('semi-basic')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-purple-400 font-semibold text-sm transition text-center border border-slate-700 block">
+                            Select Semi-Private Basic ($260/person)
+                        </a>
+                    </div>
+
+                    <!-- Semi-Private Plus ($275/person) -->
+                    <div class="glass-panel rounded-3xl p-6 border border-slate-800 flex flex-col justify-between hover:border-amber-400 transition shadow-xl">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <span class="text-xs font-bold uppercase px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Main Lodge Building</span>
+                                    <h3 class="text-2xl font-extrabold font-heading text-white mt-2">Semi-Private Plus</h3>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-2xl font-black text-amber-400">$275</span>
+                                    <span class="block text-[10px] text-slate-400 uppercase font-semibold">/ person</span>
+                                </div>
+                            </div>
+                            
+                            <p class="text-slate-300 text-sm mb-4 leading-relaxed">Located inside the Main Lodge. Features a central living room, small kitchen, and 2 attached bathrooms.</p>
+                            
+                            <div class="space-y-3 mb-6 bg-slate-950/80 p-4 rounded-2xl border border-slate-800">
+                                <h4 class="text-xs uppercase font-bold text-slate-400 flex items-center justify-between">
+                                    <span><i class="fa-solid fa-couch mr-2 text-amber-400"></i> Main Lodge Bedrooms:</span>
+                                </h4>
+                                <ul class="space-y-2 text-xs text-slate-300">
+                                    <li class="flex justify-between items-center border-b border-slate-800/80 pb-1.5">
+                                        <span class="font-medium">Bedroom 1 (Must reserve full room)</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">3 Beds</span>
+                                    </li>
+                                    <li class="flex justify-between items-center border-b border-slate-800/80 pb-1.5">
+                                        <span class="font-medium">Bedroom 2 (Must reserve full room)</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">2 Beds</span>
+                                    </li>
+                                    <li class="flex justify-between items-center">
+                                        <span class="font-medium">Bedroom 3 (Must reserve full room)</span>
+                                        <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-300">3 Beds</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a href="#register" onclick="selectTierInForm('semi-plus')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 text-slate-950 font-black text-sm transition text-center shadow-lg block">
+                            Select Semi-Private Plus ($275/person)
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="py-20 bg-slate-900/60 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="text-amber-400 text-xs font-bold uppercase tracking-widest">Camp Bob Waldorf Grounds</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-heading mt-1 mb-3">Camp Map & Boundaries</h2>
+                    <p class="text-slate-400 text-sm sm:text-base">Get familiar with the retreat layout in Glendale. Locate your cabin, bathhouses, dining hall, MAC rehearsal hall, and key activity locations.</p>
+                </div>
+
+                <div class="glass-panel p-4 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl">
+                    
+                    <!-- Legend Banner -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6 p-4 rounded-2xl bg-slate-950/80 border border-slate-800 text-xs font-medium">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-blue-400 text-lg">★</span>
+                            <span class="text-slate-200"><strong>Blue Star:</strong> Premium Cabins</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-amber-300 text-lg">★</span>
+                            <span class="text-slate-200"><strong>Yellow Star:</strong> Basic Cabins</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-pink-400 text-lg">★</span>
+                            <span class="text-slate-200"><strong>Pink Star:</strong> Programming Locations</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-rose-950/60 px-3 py-1.5 rounded-lg border border-rose-800/60">
+                            <span class="w-3 h-1 bg-rose-500 inline-block"></span>
+                            <span class="text-rose-200 text-[11px] font-bold">Red Line = GMCLA Boundary</span>
+                        </div>
+                    </div>
+
+                    <!-- Map Container -->
+                    <div class="rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-950 shadow-xl p-4 sm:p-6 text-center">
+                        <h3 class="text-white font-bold font-heading text-lg sm:text-xl mb-4 tracking-wide text-amber-400">
+                            <i class="fa-solid fa-map mr-2"></i>Camp Bob Waldorf Map
+                        </h3>
+                        <img src="Camp Map.jpg" alt="Camp Bob Waldorf Map" class="w-full h-auto rounded-xl border border-slate-800 shadow-2xl object-contain max-h-[750px] mx-auto" />
+                    </div>
+
+                    <div class="mt-6 p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs sm:text-sm flex items-start space-x-3">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-400 text-lg mt-0.5 flex-shrink-0"></i>
+                        <div>
+                            <strong>Camp Boundary Guidelines:</strong> The solid red line indicates the official GMCLA retreat grounds boundary. Please stay within the marked camp boundary for the duration of the retreat unless directed by retreat leaders.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="passes" class="py-16 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="text-sky-400 text-xs font-bold uppercase tracking-widest">Commuter Options</span>
+                    <h2 class="text-3xl font-bold font-heading mt-1 mb-3">No Overnight / Day Pass Options</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-2xl mx-auto">We strongly encourage all members to attend retreat for the full weekend and stay in the cabins! We rely on member registrations to meet our minimus with the camp, and you can only get the full retreat experience by staying all weekend! If you have extenuating circumstances that will not allow you to stay all weekend, we have the following commuter options available.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    
+                    <!-- Full Weekend No Overnight ($150/person) -->
+                    <div class="glass-panel p-6 rounded-3xl border border-slate-800 flex flex-col justify-between hover:border-sky-500/50 transition">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold uppercase px-3 py-1 rounded-full bg-sky-950 text-sky-400 border border-sky-800">Full Weekend Pass</span>
+                                <span class="text-2xl font-black text-sky-400">$150</span>
+                            </div>
+                            <h3 class="text-xl font-bold font-heading text-white mb-2">Full Weekend - No Overnight</h3>
+                            <p class="text-slate-300 text-sm mb-4 leading-relaxed">Participate in all three days of retreat programming (Friday through Sunday) without staying overnight on-site.</p>
+                            
+                            <ul class="space-y-2 text-xs text-slate-300 mb-6 bg-slate-950/60 p-4 rounded-xl border border-slate-800">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-sky-400 mr-2"></i> All Full Chorus Rehearsals & Sectionals</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-sky-400 mr-2"></i> All Meals Included (Fri Dinner through Sun Lunch)</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-sky-400 mr-2"></i> Access to Saturday No-Talent Talent Show & Afterparty</li>
+                            </ul>
+                        </div>
+
+                        <a href="#register" onclick="selectTierInForm('day-full')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-sky-400 font-semibold text-sm transition text-center border border-slate-700 block">
+                            Select Full Weekend Commuter ($150)
+                        </a>
+                    </div>
+
+                    <!-- Saturday Only ($75/person) -->
+                    <div class="glass-panel p-6 rounded-3xl border border-slate-800 flex flex-col justify-between hover:border-amber-500/50 transition">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold uppercase px-3 py-1 rounded-full bg-amber-950 text-amber-400 border border-amber-800">Single Day Pass</span>
+                                <span class="text-2xl font-black text-amber-400">$75</span>
+                            </div>
+                            <h3 class="text-xl font-bold font-heading text-white mb-2">Saturday Only - Full Day Programming</h3>
+                            <p class="text-slate-300 text-sm mb-4 leading-relaxed">Packed single-day pass covering Saturday’s high-energy schedule from morning rehearsal to late-night social activities!</p>
+                            
+                            <ul class="space-y-2 text-xs text-slate-300 mb-6 bg-slate-950/60 p-4 rounded-xl border border-slate-800">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-2"></i> Morning & Afternoon Rehearsals</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-2"></i> Saturday Breakfast, Lunch & Dinner Included</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-2"></i> Famous "No-Talent Talent Show" Entry</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 mr-2"></i> Saturday Night Afterparty / Movie Night</li>
+                            </ul>
+                        </div>
+
+                        <a href="#register" onclick="selectTierInForm('day-sat')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-400 font-semibold text-sm transition text-center border border-slate-700 block">
+                            Select Saturday Only ($75)
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="itinerary" class="py-20 bg-slate-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-purple-400 text-xs font-bold uppercase tracking-widest">March 5-7 Master Schedule</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-heading mt-1 mb-2">Retreat Itinerary</h2>
+                    <p class="text-slate-400 text-sm">Day-by-day break down of all Retreat programming</p>
+                    
+                    <!-- Day Tabs -->
+                    <div class="flex justify-center gap-2 mt-8 p-1.5 bg-slate-900 rounded-2xl border border-slate-800 max-w-md mx-auto">
+                        <button onclick="switchDay('friday')" id="tab-friday" class="itinerary-tab flex-1 py-2.5 rounded-xl font-bold text-sm bg-gradient-to-r from-amber-500 to-rose-500 text-slate-950 shadow-md">Fri (Mar 5)</button>
+                        <button onclick="switchDay('saturday')" id="tab-saturday" class="itinerary-tab flex-1 py-2.5 rounded-xl font-bold text-sm text-slate-400 hover:text-white">Sat (Mar 6)</button>
+                        <button onclick="switchDay('sunday')" id="tab-sunday" class="itinerary-tab flex-1 py-2.5 rounded-xl font-bold text-sm text-slate-400 hover:text-white">Sun (Mar 7)</button>
+                    </div>
+                </div>
+
+                <!-- Timeline Container -->
+                <div class="max-w-3xl mx-auto relative pl-6 sm:pl-8 border-l-2 border-slate-800 space-y-8" id="itinerary-content">
+                    
+                    <!-- FRIDAY MARCH 5 -->
+                    <div class="itinerary-day-panel space-y-8" id="day-friday">
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-amber-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-amber-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 3:00 PM – Onward</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Security Gate Stand</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Check-in Upon Arrival</h4>
+                                <p class="text-slate-400 text-sm mt-2">Arrive at Camp Bob Waldorf security gate. Collect your cabin and room assignments before settling into your accommodations.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-rose-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-rose-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 7:00 PM – 8:00 PM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-amber-950 text-amber-300 border border-amber-800 font-medium">Dining Hall</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Friday Night Dinner</h4>
+                                <p class="text-slate-400 text-sm mt-2">Opening retreat meal. All attendees bussing own service. <strong>Clean-up duties by Tenor 1s.</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-blue-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-blue-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 8:00 PM – 9:00 PM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Counselor Lounge</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">12-Step Meeting</h4>
+                                <p class="text-slate-400 text-sm mt-2">Supportive recovery gathering open to all interested singers and members.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-purple-800/60">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-purple-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 8:30 PM – 11:15 PM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-purple-900/50 text-purple-300 font-medium border border-purple-800">Teen Center</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Party: "Ease on Down to the Ozdust Ballroom"</h4>
+                                <p class="text-slate-400 text-sm mt-2">Kickoff party and dancing in the Teen Center! All attendees requested to assist with clean-up.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-emerald-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 11:15 PM – 12:15 AM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Cookout Pavilion</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Campfire Gathering</h4>
+                                <p class="text-slate-400 text-sm mt-2">Fire Pit at Cookout Pavilion (weather permitting). Unwind around the fire with songs and stories. Assist with tear down.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SATURDAY MARCH 6 -->
+                    <div class="itinerary-day-panel hidden space-y-8" id="day-saturday">
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-sky-400 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sky-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 6:45 AM – 7:45 AM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Outdoor Rec Area</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Morning Yoga</h4>
+                                <p class="text-slate-400 text-sm mt-2">Led by Jack Inman. Meet at the outdoor recreation area for peaceful morning stretch & breathe.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-amber-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-amber-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 8:00 AM – 9:15 AM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Dining Hall</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Saturday Breakfast</h4>
+                                <p class="text-slate-400 text-sm mt-2">Hot breakfast buffet. Bussing own service. <strong>Clean-up duties by Tenor 2s.</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-purple-500/30">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-purple-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 9:30 AM – 12:30 PM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-purple-900/60 text-purple-300 font-bold border border-purple-700">MAC Hall</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">REHEARSAL 1</h4>
+                                <p class="text-slate-400 text-sm mt-2">First full chorus morning rehearsal session in the Music and Art Center (MAC Hall).</p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-emerald-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 12:45 PM – 1:45 PM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Dining Hall</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Lunch</h4>
+                                <p class="text-slate-400 text-sm mt-2">Midday meal. Bussing own service. <strong>Clean-up duties by Baritones.</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-purple-500/30">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-purple-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 2:00 PM – 4:30 PM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-purple-900/60 text-purple-300 font-bold border border-purple-700">MAC Hall</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">REHEARSAL 2 & Group Retreat Photo</h4>
+                                <p class="text-slate-400 text-sm mt-2">Afternoon rehearsal block. <strong>★ Note: 3:00 PM Annual Retreat Group Photo!</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-rose-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-rose-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 4:30 PM – 6:30 PM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Multiple Areas</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Free Time, Dodgeball & Tech Rehearsal</h4>
+                                <div class="text-slate-300 text-xs mt-2 space-y-1.5">
+                                    <p>• <strong>12 Step Meeting:</strong> Counselor Lounge</p>
+                                    <p>• <strong>Tech Rehearsal:</strong> Talent Show performers run-through at MAC Hall</p>
+                                    <p>• <strong>Dodgeball Tournament:</strong> Soccer Field (5:00 PM – 6:00 PM game time)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-amber-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-amber-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 6:30 PM – 7:15 PM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Dining Hall</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Saturday Night Dinner</h4>
+                                <p class="text-slate-400 text-sm mt-2">Catered dinner. Bussing own service. <strong>Clean-up duties by Basses.</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-amber-400 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-amber-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 7:15 PM – 8:00 PM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Across Camp</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Free Time & Cabin Decorating Contest</h4>
+                                <p class="text-slate-400 text-sm mt-2">Retreat Coordinators walk Catie through camp to judge all cabin decorations!</p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-rose-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-amber-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 8:00 PM – Late</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">MAC Hall</span>
+                                </div>
+                                <h4 class="text-xl font-extrabold font-heading text-white">No-Talent Talent Show!</h4>
+                                <p class="text-slate-300 text-sm mt-2">The iconic GMCLA Saturday night show at MAC Hall! Hilarious, surprising, and heartwarming performances from choir members.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-purple-400 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-purple-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> Post-Show</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Afterparty / Movie</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Late Night Festivities</h4>
+                                <div class="text-slate-300 text-xs mt-2 space-y-1.5">
+                                    <p>• <strong>Judith After Party:</strong> Crow Cabin</p>
+                                    <p>• <strong>Movie Night ("The Wiz"):</strong> Teen Center. Alternative cozy option! Bring pillows & blankets. Popcorn provided!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SUNDAY MARCH 7 -->
+                    <div class="itinerary-day-panel hidden space-y-8" id="day-sunday">
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-amber-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-amber-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 9:00 AM – 9:50 AM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Dining Hall</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Sunday Breakfast</h4>
+                                <p class="text-slate-400 text-sm mt-2">Bussing own service. <strong>Clean-up duties by ALL chorus members.</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-purple-500/30">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-purple-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 10:00 AM – 1:15 PM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-purple-900/60 text-purple-300 font-bold border border-purple-700">MAC Hall</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">REHEARSAL 3</h4>
+                                <p class="text-slate-400 text-sm mt-2">Final full chorus rehearsal block in the Music and Art Center.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-rose-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-rose-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 1:15 PM – 1:25 PM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Camp Performance</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Performance for Camp Staff</h4>
+                                <p class="text-slate-400 text-sm mt-2">Singing two special "Thank You" songs for the Camp Bob Waldorf staff.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-emerald-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 1:25 PM – 2:00 PM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Dining Hall</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Farewell Lunch</h4>
+                                <p class="text-slate-400 text-sm mt-2">Final meal together. Bussing own service. <strong>Clean-up duties by ALL members.</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-amber-400 border-4 border-slate-950"></div>
+                            <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-amber-400 font-mono text-sm font-bold"><i class="fa-regular fa-clock mr-1"></i> 2:00 PM</span>
+                                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">Camp Departure</span>
+                                </div>
+                                <h4 class="text-lg font-bold font-heading text-white">Clean Up & Head Home</h4>
+                                <p class="text-slate-400 text-sm mt-2">All accommodations must be cleared and tidied up before leaving camp grounds.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-20 bg-slate-950 border-t border-slate-800">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-amber-400 text-xs font-bold uppercase tracking-widest">Everything You Need To Know</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-heading mt-1 mb-4">Retreat FAQ & Policies</h2>
+                    <p class="text-slate-400">Important details regarding Camp Bob Waldorf, financial aid, FSIP volunteering, and policies.</p>
+                </div>
+
+                <div class="space-y-4" id="faq-accordion">
+                    
+                    <!-- Scholarships FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span><i class="fa-solid fa-hand-holding-heart text-amber-400 mr-3"></i> Are scholarships available if cost is a barrier?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <div class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 space-y-3">
+                                <p>We want everyone to attend retreat! It really is a special time where you get to really bond with your family and have a lot of fun along the way!</p>
+                                <p>If you want to attend retreat but you find yourself being prohibited by cost, there may be scholarship opportunities available. Please email Micah & David at <a href="mailto:retreatcoordinators@membership.gmcla.org" class="text-amber-400 font-semibold underline">retreatcoordinators@membership.gmcla.org</a> letting us know you are interested in a scholarship.</p>
+                                <p class="text-xs text-slate-400 italic">Scholarships are offered on a first come, first served basis and available scholarship funds are based on membership attendance levels and donations. We will do everything we can to accommodate those interested, but please reserve the scholarships to members who are genuinely in need.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scholarship Donations FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span><i class="fa-solid fa-circle-dollar-to-slot text-emerald-400 mr-3"></i> How can I donate to the Scholarship Fund or sponsor a singer?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <div class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 space-y-3">
+                                <p>If you are interested in donating to the general scholarship fund, please check out the scholarship donation option in the Chorus Connection Payments Center.</p>
+                                <p>If you are interested in sponsoring a specific member, please contact that member directly and arrange this privately. Every member attending retreat must pay for their own registration through their own Chorus Connection account.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FSIP FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span><i class="fa-solid fa-award text-purple-400 mr-3"></i> FSIP (Fair Share Investment Program) Opportunities</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <p class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60">
+                                If you are an FSIP eligible member during this concert cycle that has already been approved via Memcom, you may sign up to volunteer as Retreat help and count those hours toward your FSIP! Please email Micah & David at <a href="mailto:retreatcoordinators@membership.gmcla.org" class="text-amber-400 font-semibold underline">retreatcoordinators@membership.gmcla.org</a> to let us know that you are an FSIP eligible member who wants to help with retreat!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Cancellation & Refund Policy FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span><i class="fa-solid fa-calendar-xmark text-rose-400 mr-3"></i> Registration Cancellation Policy & Refunds</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <div class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 space-y-3">
+                                <p>Full refund is available if notified by <strong>Sunday, March 1st</strong>. No refunds for no-show or cancellation after Sunday, March 1st.</p>
+                                <p>If you need to cancel your registration and you are in a position to donate, we will happily apply your registration fees toward the Scholarship Fund or the General Retreat Budget upon request.</p>
+                                <p>Please reach out to Micah & David at <a href="mailto:retreatcoordinators@membership.gmcla.org" class="text-amber-400 font-semibold underline">retreatcoordinators@membership.gmcla.org</a> to request cancellations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Substance-Free Housing FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span>❤️ <i class="fa-solid fa-wine-glass-slash text-purple-400 mr-3"></i> Is there an alcohol & substance-free cabin option?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <p class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 flex items-start space-x-2">
+                                <span class="text-amber-400 font-bold">◆</span>
+                                <span>Yes! In our Standard Cabin tier, <strong>Iroquois Cabin (14 Beds)</strong> is designated specifically as an Alcohol & Substance-Free cabin for members who prefer a sober living environment throughout the retreat weekend.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Partners / Spouses / Guests FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span><i class="fa-solid fa-user-group text-sky-400 mr-3"></i> Are partners / spouses / guests allowed to attend retreat?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <p class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60">
+                                Retreat is a special weekend for our Chorus family and is intended for you to spend quality time with members of the Chorus. We do not allow Chorus Membership to bring guests to retreat.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Smoking Policy FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span><i class="fa-solid fa-ban-smoking text-rose-400 mr-3"></i> Can I smoke at camp?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <p class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60">
+                                CBW is a completely smoke-free environment. This applies to any and all combustible smoking, as well as vaping or electronic smoking devices. If you wish to smoke, you must exit camp and the surrounding neighborhood.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Location FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span><i class="fa-solid fa-map-location-dot text-amber-400 mr-3"></i> Where is Camp Bob Waldorf?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <p class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60">
+                                1041 Shirlyjean Street, Glendale California 91208.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Alcohol Policy FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span><i class="fa-solid fa-wine-glass text-amber-400 mr-3"></i> Can I drink alcohol at camp?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <p class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60">
+                                Responsibly, yes! We're all adults and we expect members to conduct themselves as such. Please remember that this is a family-oriented camp, so please fully clean up and remove any alcohol containers upon cabin clean-up.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Drug Policy FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span><i class="fa-solid fa-capsules text-rose-400 mr-3"></i> What is GMCLA Policy on drug use?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <p class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60">
+                                Please refer to the Membership Handbook for more information on this. Membership Handbook policies are in full effect during Retreat. There is a zero-tolerance policy for drugs at Retreat, and members violating this will be asked to leave camp immediately without a refund.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Parking FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span><i class="fa-solid fa-car text-sky-400 mr-3"></i> What is parking like?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <div class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 space-y-2">
+                                <p class="font-bold text-amber-400">CARPOOL, CARPOOL, CARPOOL!</p>
+                                <p>CBW has limited on-site parking, and we offer this to GMCLA members staying all weekend (not commuting) on a first-come, first-served basis. Upon arrival, your car will be stack-parked in the parking lot, and you will not be able to leave until camp is over on Sunday. Please carpool with other members!</p>
+                                <p class="p-3 bg-rose-950/60 border border-rose-800 rounded-xl text-rose-200 text-xs font-semibold">
+                                    <i class="fa-solid fa-triangle-exclamation mr-1 text-rose-400"></i> VERY IMPORTANT: We are NOT allowed to park on the street in the adjacent neighborhood. Please help the camp keep a positive relationship with its neighbors, and DO NOT park on the streets adjacent to the camp.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Commuter Parking FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span><i class="fa-solid fa-user-clock text-purple-400 mr-3"></i> What if I am going to commute to camp and not stay overnight?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <div class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 space-y-2">
+                                <p>Commuters are strongly encouraged to be dropped off/picked up or consider ride-share. There may be a very limited number of parking spaces available for commuters, but these are not guaranteed.</p>
+                                <p class="p-3 bg-rose-950/60 border border-rose-800 rounded-xl text-rose-200 text-xs font-semibold">
+                                    <i class="fa-solid fa-triangle-exclamation mr-1 text-rose-400"></i> VERY IMPORTANT: We are NOT allowed to park on the street in the adjacent neighborhood. Please help the camp keep a positive relationship with its neighbors, and DO NOT park on the streets adjacent to the camp.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pet Policy FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span><i class="fa-solid fa-paw text-emerald-400 mr-3"></i> Can I bring a pet?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <p class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60">
+                                Pets are not allowed at Camp Bob Waldorf.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Itinerary / Attendance FAQ -->
+                    <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-lg flex justify-between items-center text-white hover:text-amber-400 transition">
+                            <span><i class="fa-solid fa-clipboard-check text-amber-400 mr-3"></i> Do I have to follow the itinerary?</span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-6 bg-slate-900/40">
+                            <p class="py-4 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60">
+                                Yes, please! We have worked very hard to curate a weekend for everyone to bond, have fun, and learn music! Participation in all rehearsals is mandatory, and participation in all activities is strongly encouraged!
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="register" class="py-20 bg-slate-900/70 border-t border-slate-800 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    
+                    <div class="lg:col-span-5">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase mb-4">
+                            <span>Official Registration</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-bold font-heading mb-6">Register for the 2027 GMCLA Retreat</h2>
+                        <p class="text-slate-300 mb-8 leading-relaxed">
+                            Cabin & Bed reservations are processed live through this website on a first-come, first-served basis. We recommend coordinating with the other members you wish to room with ahead of time and being ready to register as soon as registrations open to secure your desired cabin space.
+                        </p>
+
+                        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-xs text-slate-300 space-y-2">
+                            <p class="font-bold text-amber-400">Questions or special accommodations?</p>
+                            <p>Contact Micah & David at <a href="mailto:retreatcoordinators@membership.gmcla.org" class="text-white font-semibold underline">retreatcoordinators@membership.gmcla.org</a></p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <div class="glass-panel p-6 sm:p-10 rounded-3xl border border-slate-800 shadow-2xl relative" id="registration-card">
+                            
+                            <h3 class="text-2xl font-bold font-heading mb-2 text-white flex items-center justify-between">
+                                <span><i class="fa-solid fa-pen-clip text-amber-400 mr-3"></i> Member Registration</span>
+                                <span class="text-xs bg-purple-900/60 text-purple-300 px-3 py-1 rounded-full font-medium border border-purple-700">March 5-7, 2027</span>
+                            </h3>
+
+                            <div class="p-3 mb-6 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs flex items-center space-x-2">
+                                <i class="fa-solid fa-database text-amber-400 text-base flex-shrink-0"></i>
+                                <span>Registrations are verified and synchronized live with the retreat database.</span>
+                            </div>
+
+                            <!-- Duplicate Email Error Banner -->
+                            <div id="duplicate-error-banner" class="hidden p-4 mb-6 rounded-2xl bg-rose-950/80 border border-rose-500/60 text-rose-200 text-xs space-y-1">
+                                <div class="font-bold flex items-center text-rose-400 text-sm">
+                                    <i class="fa-solid fa-circle-exclamation mr-2"></i> Registration Already Exists
+                                </div>
+                                <p id="duplicate-error-text">An existing registration for this email address was already found in the retreat database.</p>
+                                <p class="text-[11px] text-slate-300 pt-1">If you need to change your cabin tier or roommate requests, please contact Micah & David directly at <a href="mailto:retreatcoordinators@membership.gmcla.org" class="underline text-amber-300 font-semibold">retreatcoordinators@membership.gmcla.org</a>.</p>
+                            </div>
+
+                            <form id="retreat-reg-form" onsubmit="handleRegistrationSubmit(event)" class="space-y-6">
+                                
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 mb-2 uppercase">First Name *</label>
+                                        <input type="text" id="input-first-name" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-amber-400 transition" placeholder="First name">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 mb-2 uppercase">Last Name *</label>
+                                        <input type="text" id="input-last-name" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-amber-400 transition" placeholder="Last name">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1 uppercase">Email Address *</label>
+                                    <input type="email" id="input-email" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-amber-400 transition" placeholder="name@domain.com">
+                                    <div class="mt-2 text-[11px] text-amber-400/90 font-medium flex items-center space-x-1.5 bg-slate-950 p-2.5 rounded-lg border border-slate-800">
+                                        <i class="fa-solid fa-circle-info text-amber-400"></i>
+                                        <span><strong>NOTE:</strong> This <u>MUST</u> be the exact same email address associated with your Chorus Connection account.</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-2 uppercase">Voice Section *</label>
+                                    <select id="input-section" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-amber-400 transition">
+                                        <option value="">Select Voice Part...</option>
+                                        <option value="T1">Tenor 1</option>
+                                        <option value="T2">Tenor 2</option>
+                                        <option value="B1">Baritone</option>
+                                        <option value="B2">Bass</option>
+                                        <option value="Staff">GMCLA Staff / Artistic Team</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-amber-400 mb-2 uppercase">Select Accommodation *</label>
+                                    <select id="reg-room-select" onchange="handleRoomSelectChange()" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-amber-500/50 text-white font-medium focus:outline-none focus:border-amber-400 transition">
+                                        <option value="" data-price="0" data-beds="1">-- Select Specific Room / Cabin / Pass --</option>
+                                        
+                                        <optgroup label="Standard Cabins ($190/person)">
+                                            <option value="standard-powhatan" data-price="190" data-beds="1">Powhatan (Standard Cabin - $190/person)</option>
+                                            <option value="standard-shoshone" data-price="190" data-beds="1">Shoshone (Standard Cabin - $190/person)</option>
+                                            <option value="standard-iroquois" data-price="190" data-beds="1">Iroquois - Substance Free (Standard - $190/person)</option>
+                                            <option value="standard-wangari" data-price="190" data-beds="1">Wangari (Standard Cabin - $190/person)</option>
+                                            <option value="standard-sequoia" data-price="190" data-beds="1">Sequoia (Standard Cabin - $190/person)</option>
+                                        </optgroup>
+
+                                        <optgroup label="Cabin Plus - Attached Restroom ($210/person)">
+                                            <option value="plus-aztec" data-price="210" data-beds="1">Aztec (Cabin Plus - $210/person)</option>
+                                            <option value="plus-tongva" data-price="210" data-beds="1">Tongva (Cabin Plus - $210/person)</option>
+                                        </optgroup>
+
+                                        <optgroup label="Witherbee Wolfe Den ($230/person)">
+                                            <option value="witherbee-rm1" data-price="230" data-beds="3">Witherbee Room 1 (3 Beds - Must Reserve Full Room - $230/person)</option>
+                                            <option value="witherbee-rm2" data-price="230" data-beds="1">Witherbee Room 2 (Individual Bed - $230/person)</option>
+                                            <option value="witherbee-rm3" data-price="230" data-beds="1">Witherbee Room 3 (Individual Bed - $230/person)</option>
+                                        </optgroup>
+
+                                        <optgroup label="Semi-Private Basic - Teen Center ($260/person)">
+                                            <option value="semi-basic-rm1" data-price="260" data-beds="3">Semi-Private Basic Room 1 (3 Beds - Must Reserve Full Room - $260/person)</option>
+                                            <option value="semi-basic-rm2" data-price="260" data-beds="2">Semi-Private Basic Room 2 (2 Beds - Must Reserve Full Room - $260/person)</option>
+                                            <option value="semi-basic-rm3" data-price="260" data-beds="2">Semi-Private Basic Room 3 (2 Beds - Must Reserve Full Room - $260/person)</option>
+                                        </optgroup>
+
+                                        <optgroup label="Semi-Private Plus - Main Lodge ($275/person)">
+                                            <option value="semi-plus-rm1" data-price="275" data-beds="3">Semi-Private Plus Bedroom 1 (3 Beds - Must Reserve Full Room - $275/person)</option>
+                                            <option value="semi-plus-rm2" data-price="275" data-beds="2">Semi-Private Plus Bedroom 2 (2 Beds - Must Reserve Full Room - $275/person)</option>
+                                            <option value="semi-plus-rm3" data-price="275" data-beds="3">Semi-Private Plus Bedroom 3 (3 Beds - Must Reserve Full Room - $275/person)</option>
+                                        </optgroup>
+
+                                        <optgroup label="Commuter Day Passes (No Overnight)">
+                                            <option value="day-full" data-price="150" data-beds="1">Full Weekend Commuter Pass ($150/person)</option>
+                                            <option value="day-sat" data-price="75" data-beds="1">Saturday Only Full Day Pass ($75/person)</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+
+                                <!-- Dynamic Roommates Input Fields for Rooms with 3 or fewer beds -->
+                                <div id="roommates-container" class="space-y-4 hidden"></div>
+
+                                <!-- Dynamic Required Checkboxes for Multi-person Room Reservations -->
+                                <div id="multi-room-checkboxes" class="space-y-3 hidden bg-amber-500/10 p-4 rounded-2xl border border-amber-500/30 text-xs text-amber-200">
+                                    <div class="font-bold text-amber-400 uppercase text-[11px] mb-1">
+                                        <i class="fa-solid fa-file-contract mr-1"></i> Room Reservation Confirmations
+                                    </div>
+                                    <label class="flex items-start space-x-3 cursor-pointer">
+                                        <input type="checkbox" id="chk-permission" class="accent-amber-400 w-4 h-4 rounded mt-0.5 flex-shrink-0">
+                                        <span>By checking this box, I confirm that I have discussed this reservation with all of the people named above and I have their permission to reserve a bed for them.</span>
+                                    </label>
+                                    <label class="flex items-start space-x-3 cursor-pointer">
+                                        <input type="checkbox" id="chk-payment" class="accent-amber-400 w-4 h-4 rounded mt-0.5 flex-shrink-0">
+                                        <span>I understand that each person listed above will need to pay for their own registration in their own Chorus Connection profile when the payment option becomes available.</span>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-2 uppercase">Dietary Preferences & Allergies</label>
+                                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3 text-xs text-slate-200">
+                                        <label class="flex items-center space-x-2 bg-slate-950 p-3 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700">
+                                            <input type="checkbox" name="dietary" value="Vegetarian" class="accent-amber-400 w-4 h-4 rounded">
+                                            <span>Vegetarian</span>
+                                        </label>
+                                        <label class="flex items-center space-x-2 bg-slate-950 p-3 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700">
+                                            <input type="checkbox" name="dietary" value="Vegan" class="accent-amber-400 w-4 h-4 rounded">
+                                            <span>Vegan</span>
+                                        </label>
+                                        <label class="flex items-center space-x-2 bg-slate-950 p-3 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700">
+                                            <input type="checkbox" name="dietary" value="Gluten-Free" class="accent-amber-400 w-4 h-4 rounded">
+                                            <span>Gluten-Free</span>
+                                        </label>
+                                        <label class="flex items-center space-x-2 bg-slate-950 p-3 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700">
+                                            <input type="checkbox" name="dietary" value="Dairy-Free" class="accent-amber-400 w-4 h-4 rounded">
+                                            <span>Dairy-Free</span>
+                                        </label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="block text-[11px] font-medium text-slate-400 mb-1">Allergies: Please specify</label>
+                                        <input type="text" id="input-allergies" class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs focus:outline-none focus:border-amber-400 transition" placeholder="Specify any food allergies or special medical dietary needs...">
+                                    </div>
+                                    <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs flex items-center space-x-2">
+                                        <i class="fa-solid fa-shield-cat text-amber-400 text-base flex-shrink-0"></i>
+                                        <span><strong>Camp Policy:</strong> The Camp Bob Waldorf kitchen and cafeteria are 100% nut-free facilities.</span>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 flex justify-between items-center">
+                                    <div>
+                                        <span class="text-xs uppercase font-bold text-slate-400 block">Calculated Price Rate:</span>
+                                        <span class="text-[11px] text-slate-500">Includes all programming & meals</span>
+                                    </div>
+                                    <span class="text-3xl font-black font-heading text-amber-400" id="total-price-display">$0</span>
+                                </div>
+
+                                <button type="submit" id="submit-reg-btn" class="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 hover:opacity-95 text-slate-950 font-black text-lg transition shadow-xl shadow-amber-500/10 flex items-center justify-center space-x-2">
+                                    <span id="btn-text">Submit Registration</span>
+                                    <i class="fa-solid fa-arrow-right" id="btn-icon"></i>
+                                </button>
+                            </form>
+
+                            <div id="reg-success" class="hidden text-center py-10 space-y-4">
+                                <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto text-3xl">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <h4 class="text-2xl font-bold font-heading text-white">Registration Received!</h4>
+                                <p class="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
+                                    Thank you! Your retreat registration has been received. Your individual payment option will become available in the Chorus Connection Payment Center soon.
+                                </p>
+                                
+                                <div class="p-4 bg-slate-950 rounded-2xl border border-slate-800 text-left max-w-md mx-auto text-xs text-slate-300 space-y-2">
+                                    <div class="flex justify-between border-b border-slate-800 pb-2">
+                                        <span class="text-slate-400">Registered Email(s):</span>
+                                        <span class="font-bold text-amber-400" id="confirmed-email">--</span>
+                                    </div>
+                                    <div class="flex justify-between border-b border-slate-800 pb-2">
+                                        <span class="text-slate-400">Reserved Accommodation:</span>
+                                        <span class="font-bold text-white" id="confirmed-room">--</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Rate:</span>
+                                        <span class="font-bold text-emerald-400" id="confirmed-total">$0</span>
+                                    </div>
+                                </div>
+
+                                <button onclick="resetRegForm()" class="px-6 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-400 font-semibold text-sm transition border border-slate-700">
+                                    Register Another Member
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center space-x-3">
+                <div class="w-8 h-8 rounded-lg rainbow-border p-0.5">
+                    <div class="w-full h-full bg-slate-950 rounded-[6px] flex items-center justify-center">
+                        <i class="fa-solid text-amber-400 fa-music text-xs"></i>
+                    </div>
+                </div>
+                <span class="text-white font-bold font-heading tracking-wide">Gay Men's Chorus of Los Angeles</span>
+            </div>
+            <p>Retreat Coordinators (Micah & David): <a href="mailto:retreatcoordinators@membership.gmcla.org" class="text-amber-400 hover:underline">retreatcoordinators@membership.gmcla.org</a></p>
+            <p class="text-xs text-slate-500">© 2027 Gay Men's Chorus of Los Angeles (GMCLA). Camp Bob Waldorf Retreat.</p>
+        </div>
+    </footer>
+
+    <!-- Google Sheets Setup Modal -->
+    <div id="sheets-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="max-w-2xl w-full bg-slate-900 border border-slate-700 rounded-3xl p-6 sm:p-8 space-y-6 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+                <h3 class="text-xl font-bold text-white font-heading flex items-center gap-2">
+                    <i class="fa-solid fa-table text-emerald-400"></i> Google Sheets Database Sync Setup
+                </h3>
+                <button onclick="closeSheetsModal()" class="text-slate-400 hover:text-white text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="text-xs text-slate-300 space-y-4">
+                <p>Follow these quick steps to log all live registrations straight into a Google Sheet:</p>
+                
+                <ol class="list-decimal pl-4 space-y-2 text-slate-300">
+                    <li>Create a new Google Sheet named <strong>"GMCLA Retreat Registrations 2027"</strong>.</li>
+                    <li>Go to <strong>Extensions > Apps Script</strong>.</li>
+                    <li>Paste the webhook script and deploy as a Web App with access set to <em>"Anyone"</em>.</li>
+                    <li>Copy your Web App Webhook URL and paste it below.</li>
+                </ol>
+
+                <div>
+                    <label class="block font-bold text-amber-400 mb-1">Google Apps Script Webhook URL:</label>
+                    <input type="text" id="webhook-url-input" class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white font-mono text-xs" placeholder="https://script.google.com/macros/s/.../exec">
+                </div>
+            </div>
+
+            <div class="flex justify-end space-x-3 pt-4 border-t border-slate-800">
+                <button onclick="closeSheetsModal()" class="px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 hover:text-white text-xs font-semibold">Close</button>
+                <button onclick="saveWebhookUrl()" class="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold">Save Webhook URL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Gallery Category Switcher
+        function switchGalleryCategory(cat) {
+            document.querySelectorAll('.gallery-category-panel').forEach(panel => panel.classList.add('hidden'));
+            document.querySelectorAll('.gallery-cat-tab').forEach(tab => {
+                tab.classList.remove('bg-gradient-to-r', 'from-amber-500', 'to-rose-500', 'text-slate-950', 'shadow-md');
+                tab.classList.add('text-slate-400');
+            });
+
+            document.getElementById(`gallery-category-${cat}`).classList.remove('hidden');
+            const activeTab = document.getElementById(`cat-tab-${cat}`);
+            activeTab.classList.add('bg-gradient-to-r', 'from-amber-500', 'to-rose-500', 'text-slate-950', 'shadow-md');
+            activeTab.classList.remove('text-slate-400');
+        }
+
+        // Cabin Sub-category Filter
+        function filterCabinSub(sub) {
+            document.querySelectorAll('.cabin-sub-btn').forEach(btn => {
+                btn.classList.remove('bg-slate-800', 'text-amber-400', 'font-bold');
+                btn.classList.add('bg-slate-900', 'text-slate-300');
+            });
+            event.target.classList.add('bg-slate-800', 'text-amber-400', 'font-bold');
+            event.target.classList.remove('bg-slate-900', 'text-slate-300');
+
+            const cards = document.querySelectorAll('.cabin-photo-card');
+            cards.forEach(card => {
+                if (sub === 'all' || card.getAttribute('data-sub') === sub) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Lightbox Popup
+        function openLightbox(title, folderPath) {
+            const modal = document.getElementById('gallery-lightbox');
+            const titleEl = document.getElementById('lightbox-title');
+            const imgEl = document.getElementById('lightbox-img');
+            const placeholderEl = document.getElementById('lightbox-placeholder');
+            const placeholderText = document.getElementById('lightbox-placeholder-text');
+
+            titleEl.innerText = title;
+
+            // Attempt to load image from folder path
+            imgEl.onerror = function() {
+                imgEl.classList.add('hidden');
+                placeholderEl.classList.remove('hidden');
+                placeholderText.innerText = `Folder Location: "${folderPath}" (Place photo files inside this folder)`;
+            };
+
+            imgEl.onload = function() {
+                imgEl.classList.remove('hidden');
+                placeholderEl.classList.add('hidden');
+            };
+
+            imgEl.src = folderPath;
+            modal.classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('gallery-lightbox').classList.add('hidden');
+        }
+
+        // Room Select Price & Multi-bed Roommate Field Generator
+        function handleRoomSelectChange() {
+            const select = document.getElementById('reg-room-select');
+            const selectedOpt = select.options[select.selectedIndex];
+            const price = parseFloat(selectedOpt.getAttribute('data-price')) || 0;
+            const beds = parseInt(selectedOpt.getAttribute('data-beds')) || 1;
+
+            const roommatesContainer = document.getElementById('roommates-container');
+            const checkboxesContainer = document.getElementById('multi-room-checkboxes');
+            const chkPerm = document.getElementById('chk-permission');
+            const chkPay = document.getElementById('chk-payment');
+
+            if (price > 0) {
+                document.getElementById('total-price-display').innerText = `$${price}/person`;
+            } else {
+                document.getElementById('total-price-display').innerText = `$0`;
+            }
+
+            if (beds > 1 && beds <= 3) {
+                let html = `
+                    <div class="p-3 rounded-xl bg-purple-950/60 border border-purple-800 text-purple-200 text-xs flex items-center space-x-2 mb-2">
+                        <i class="fa-solid fa-people-roof text-purple-400 text-base flex-shrink-0"></i>
+                        <span>This room accommodates <strong>${beds} people</strong>. All ${beds} beds are being reserved together in this submission ($${price}/person). Please enter details for all additional occupants below.</span>
+                    </div>
+                `;
+
+                for (let i = 2; i <= beds; i++) {
+                    html += `
+                        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-3">
+                            <h4 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-1.5">
+                                <i class="fa-solid fa-user-plus"></i> Person ${i} Details
+                            </h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[11px] font-medium text-slate-400 mb-1">First Name *</label>
+                                    <input type="text" id="partner-${i}-first" required class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-amber-400" placeholder="First Name">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-medium text-slate-400 mb-1">Last Name *</label>
+                                    <input type="text" id="partner-${i}-last" required class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-amber-400" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[11px] font-medium text-slate-400 mb-1">Email Address *</label>
+                                    <input type="email" id="partner-${i}-email" required class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-amber-400" placeholder="name@domain.com">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-medium text-slate-400 mb-1">Voice Section *</label>
+                                    <select id="partner-${i}-section" required class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs focus:outline-none focus:border-amber-400">
+                                        <option value="">Select Voice Part...</option>
+                                        <option value="T1">Tenor 1</option>
+                                        <option value="T2">Tenor 2</option>
+                                        <option value="B1">Baritone</option>
+                                        <option value="B2">Bass</option>
+                                        <option value="Staff">GMCLA Staff / Artistic Team</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                roommatesContainer.innerHTML = html;
+                roommatesContainer.classList.remove('hidden');
+                checkboxesContainer.classList.remove('hidden');
+                chkPerm.required = true;
+                chkPay.required = true;
+            } else {
+                roommatesContainer.innerHTML = '';
+                roommatesContainer.classList.add('hidden');
+                checkboxesContainer.classList.add('hidden');
+                chkPerm.required = false;
+                chkPay.required = false;
+                chkPerm.checked = false;
+                chkPay.checked = false;
+            }
+        }
+
+        // Itinerary Day Switching
+        function switchDay(day) {
+            document.querySelectorAll('.itinerary-day-panel').forEach(panel => panel.classList.add('hidden'));
+            document.querySelectorAll('.itinerary-tab').forEach(tab => {
+                tab.classList.remove('bg-gradient-to-r', 'from-amber-500', 'to-rose-500', 'text-slate-950', 'shadow-md');
+                tab.classList.add('text-slate-400');
+            });
+
+            document.getElementById(`day-${day}`).classList.remove('hidden');
+            const activeTab = document.getElementById(`tab-${day}`);
+            activeTab.classList.add('bg-gradient-to-r', 'from-amber-500', 'to-rose-500', 'text-slate-950', 'shadow-md');
+            activeTab.classList.remove('text-slate-400');
+        }
+
+        // Select Tier Quick Link
+        function selectTierInForm(tierVal) {
+            const select = document.getElementById('reg-room-select');
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].value.startsWith(tierVal)) {
+                    select.selectedIndex = i;
+                    handleRoomSelectChange();
+                    break;
+                }
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.fa-chevron-down');
+            
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Google Sheets Modal Functions
+        function openSheetsModal() {
+            document.getElementById('sheets-modal').classList.remove('hidden');
+            document.getElementById('webhook-url-input').value = localStorage.getItem('gmcla_webhook_url') || '';
+        }
+
+        function closeSheetsModal() {
+            document.getElementById('sheets-modal').classList.add('hidden');
+        }
+
+        function saveWebhookUrl() {
+            const url = document.getElementById('webhook-url-input').value.trim();
+            localStorage.setItem('gmcla_webhook_url', url);
+            alert('Google Sheets Webhook URL saved successfully!');
+            closeSheetsModal();
+        }
+
+        // Registration Submission Logic
+        let existingRegistrations = JSON.parse(localStorage.getItem('gmcla_registered_emails') || '[]');
+
+        function handleRegistrationSubmit(e) {
+            e.preventDefault();
+            const primaryEmail = document.getElementById('input-email').value.trim().toLowerCase();
+            const errorBanner = document.getElementById('duplicate-error-banner');
+
+            const roomSelect = document.getElementById('reg-room-select');
+            const selectedOpt = roomSelect.options[roomSelect.selectedIndex];
+            const beds = parseInt(selectedOpt.getAttribute('data-beds')) || 1;
+            const roomText = selectedOpt.text;
+            const unitPrice = parseFloat(selectedOpt.getAttribute('data-price')) || 0;
+
+            // Gather all registrants in this submission
+            const registrants = [{
+                firstName: document.getElementById('input-first-name').value.trim(),
+                lastName: document.getElementById('input-last-name').value.trim(),
+                email: primaryEmail,
+                section: document.getElementById('input-section').value,
+                price: `$${unitPrice}/person`
+            }];
+
+            if (beds > 1 && beds <= 3) {
+                const chkPerm = document.getElementById('chk-permission');
+                const chkPay = document.getElementById('chk-payment');
+                if (!chkPerm.checked || !chkPay.checked) {
+                    alert('Please confirm both room reservation checkboxes before submitting.');
+                    return;
+                }
+
+                for (let i = 2; i <= beds; i++) {
+                    const pEmail = document.getElementById(`partner-${i}-email`).value.trim().toLowerCase();
+                    registrants.push({
+                        firstName: document.getElementById(`partner-${i}-first`).value.trim(),
+                        lastName: document.getElementById(`partner-${i}-last`).value.trim(),
+                        email: pEmail,
+                        section: document.getElementById(`partner-${i}-section`).value,
+                        price: `$${unitPrice}/person`
+                    });
+                }
+            }
+
+            // Check for duplicate emails among all registrants
+            const duplicateEmail = registrants.find(r => existingRegistrations.includes(r.email));
+            if (duplicateEmail) {
+                document.getElementById('duplicate-error-text').innerText = `An existing registration for email "${duplicateEmail.email}" was already found in the retreat database.`;
+                errorBanner.classList.remove('hidden');
+                window.scrollTo({ top: errorBanner.offsetTop - 100, behavior: 'smooth' });
+                return;
+            }
+
+            errorBanner.classList.add('hidden');
+
+            // Collect dietary checkboxes & allergies
+            const dietaryChecked = Array.from(document.querySelectorAll('input[name="dietary"]:checked')).map(cb => cb.value);
+            const allergies = document.getElementById('input-allergies').value.trim();
+            if (allergies) dietaryChecked.push(`Allergies: ${allergies}`);
+            const dietaryStr = dietaryChecked.join(', ') || 'None';
+
+            const webhookUrl = localStorage.getItem('gmcla_webhook_url');
+
+            // Process each individual registration
+            registrants.forEach(r => {
+                existingRegistrations.push(r.email);
+
+                if (webhookUrl) {
+                    fetch(webhookUrl, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            timestamp: new Date().toISOString(),
+                            firstName: r.firstName,
+                            lastName: r.lastName,
+                            email: r.email,
+                            section: r.section,
+                            room: roomText,
+                            price: r.price,
+                            dietary: dietaryStr
+                        })
+                    }).catch(err => console.log('Sheets Sync Error:', err));
+                }
+            });
+
+            localStorage.setItem('gmcla_registered_emails', JSON.stringify(existingRegistrations));
+
+            // Display Confirmation UI
+            document.getElementById('retreat-reg-form').classList.add('hidden');
+            
+            const emailListStr = registrants.map(r => `${r.firstName} ${r.lastName} (${r.email})`).join(', ');
+            document.getElementById('confirmed-email').innerText = emailListStr;
+            document.getElementById('confirmed-room').innerText = roomText;
+            document.getElementById('confirmed-total').innerText = `$${unitPrice}/person`;
+            document.getElementById('reg-success').classList.remove('hidden');
+        }
+
+        function resetRegForm() {
+            document.getElementById('retreat-reg-form').reset();
+            document.getElementById('retreat-reg-form').classList.remove('hidden');
+            document.getElementById('reg-success').classList.add('hidden');
+            document.getElementById('roommates-container').classList.add('hidden');
+            document.getElementById('multi-room-checkboxes').classList.add('hidden');
+            document.getElementById('total-price-display').innerText = '$0';
+        }
+    </script>
+</body>
+</html>
