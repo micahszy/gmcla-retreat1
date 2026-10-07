@@ -557,7 +557,7 @@
                     <!-- Placeholder when photo is not found -->
                     <div id="lightbox-placeholder" class="text-center p-8 text-slate-500 hidden">
                         <i class="fa-solid fa-folder-open text-5xl mb-3 text-amber-400/60"></i>
-                        <p id="lightbox-placeholder-text" class="text-sm font-medium text-slate-300">Photo path ready to load.</p>
+                        <p id="lightbox-placeholder-text" class="text-sm font-medium text-slate-300">No photos found in this folder.</p>
                         <p class="text-xs text-slate-500 mt-2">Place files named 1.jpg, 2.jpg, 3.jpg, etc. inside this folder.</p>
                     </div>
 
@@ -1711,33 +1711,68 @@
             });
         }
 
-        // Multi-Photo Interactive Gallery Lightbox Logic
+        // Multi-Photo Lightbox Logic with Smart Dynamic Folder Limit Detection
         let galleryCurrentFolder = '';
         let galleryCurrentIndex = 1;
-        let galleryMaxPhotos = 15; // Checks up to 15 photos per folder
+        let galleryFolderMax = {}; // Caches detected max photos per folder: { 'Aztec': 6 }
 
         function openGalleryModal(title, folderPath) {
             galleryCurrentFolder = folderPath;
             galleryCurrentIndex = 1;
             document.getElementById('lightbox-title').innerText = title;
             document.getElementById('gallery-lightbox').classList.remove('hidden');
-            loadGalleryImage();
+            loadGalleryImage(0);
         }
 
-        function loadGalleryImage() {
+        function loadGalleryImage(direction = 0) {
             const imgEl = document.getElementById('lightbox-img');
             const placeholderEl = document.getElementById('lightbox-placeholder');
             const placeholderText = document.getElementById('lightbox-placeholder-text');
             const counterEl = document.getElementById('lightbox-counter');
 
+            const knownMax = galleryFolderMax[galleryCurrentFolder];
+
+            // If we know the max photos and user exceeds it moving forward, wrap back to 1
+            if (knownMax && galleryCurrentIndex > knownMax) {
+                galleryCurrentIndex = 1;
+            }
+            // If user goes below 1, wrap to known max (or stay at 1)
+            if (galleryCurrentIndex < 1) {
+                galleryCurrentIndex = knownMax ? knownMax : 1;
+            }
+
             const imgPath = `${galleryCurrentFolder}/${galleryCurrentIndex}.jpg`;
-            counterEl.innerText = `Photo ${galleryCurrentIndex}`;
+
+            if (knownMax) {
+                counterEl.innerText = `Photo ${galleryCurrentIndex} of ${knownMax}`;
+            } else {
+                counterEl.innerText = `Photo ${galleryCurrentIndex}`;
+            }
 
             imgEl.onerror = function() {
-                // If photo doesn't exist, show helpful placeholder
-                imgEl.classList.add('hidden');
-                placeholderEl.classList.remove('hidden');
-                placeholderText.innerText = `Photo "${imgPath}" not found.`;
+                // Image failed to load!
+                if (galleryCurrentIndex > 1) {
+                    // We hit the end of the folder! Record the previous photo as max
+                    const maxFound = galleryCurrentIndex - 1;
+                    galleryFolderMax[galleryCurrentFolder] = maxFound;
+
+                    if (direction > 0) {
+                        // User clicked Next past the last photo -> wrap smoothly to Photo 1
+                        galleryCurrentIndex = 1;
+                        loadGalleryImage(0);
+                    } else {
+                        // Step back to last known valid photo
+                        galleryCurrentIndex = maxFound;
+                        loadGalleryImage(0);
+                    }
+                } else {
+                    // First image failed (folder empty or no 1.jpg)
+                    galleryFolderMax[galleryCurrentFolder] = 0;
+                    imgEl.classList.add('hidden');
+                    placeholderEl.classList.remove('hidden');
+                    placeholderText.innerText = `No photos found in folder "${galleryCurrentFolder}".`;
+                    counterEl.innerText = `No Photos`;
+                }
             };
 
             imgEl.onload = function() {
@@ -1749,11 +1784,20 @@
         }
 
         function navigatePhoto(direction) {
-            galleryCurrentIndex += direction;
-            if (galleryCurrentIndex < 1) {
-                galleryCurrentIndex = 1;
+            const knownMax = galleryFolderMax[galleryCurrentFolder];
+            
+            if (knownMax === 0) return; // Empty folder
+
+            if (knownMax) {
+                galleryCurrentIndex += direction;
+                if (galleryCurrentIndex > knownMax) galleryCurrentIndex = 1;
+                if (galleryCurrentIndex < 1) galleryCurrentIndex = knownMax;
+            } else {
+                galleryCurrentIndex += direction;
+                if (galleryCurrentIndex < 1) galleryCurrentIndex = 1;
             }
-            loadGalleryImage();
+
+            loadGalleryImage(direction);
         }
 
         function closeLightbox() {
