@@ -216,7 +216,7 @@
                         <!-- Powhatan -->
                         <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="powhatan" onclick="openGalleryModal('Powhatan Cabin', 'Powhatan')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
-                                <img src="Powhatan/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="Powhatan/1.jpg" onerror="handleCardImgError(this, 'Powhatan')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-house-chimney text-4xl mb-2 text-amber-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">Powhatan Folder</span>
@@ -234,7 +234,7 @@
                         <!-- Shoshone -->
                         <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="shoshone" onclick="openGalleryModal('Shoshone Cabin', 'Shoshone')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
-                                <img src="Shoshone/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="Shoshone/1.jpg" onerror="handleCardImgError(this, 'Shoshone')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-house-chimney text-4xl mb-2 text-amber-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">Shoshone Folder</span>
@@ -252,7 +252,7 @@
                         <!-- Iroquois -->
                         <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-purple-500/50 transition cursor-pointer" data-sub="iroquois" onclick="openGalleryModal('Iroquois Cabin (Substance-Free)', 'Iroquois')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-purple-400 transition relative">
-                                <img src="Iroquois/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="Iroquois/1.jpg" onerror="handleCardImgError(this, 'Iroquois')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-house-chimney text-4xl mb-2 text-purple-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">Iroquois Folder</span>
@@ -270,7 +270,7 @@
                         <!-- Wangari -->
                         <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="wangari" onclick="openGalleryModal('Wangari Cabin', 'Wangari')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
-                                <img src="Wangari/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="Wangari/1.jpg" onerror="handleCardImgError(this, 'Wangari')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-house-chimney text-4xl mb-2 text-amber-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">Wangari Folder</span>
@@ -288,7 +288,7 @@
                         <!-- Sequoia -->
                         <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="sequoia" onclick="openGalleryModal('Sequoia Cabin', 'Sequoia')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
-                                <img src="Sequoia/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="Sequoia/1.jpg" onerror="handleCardImgError(this, 'Sequoia')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-house-chimney text-4xl mb-2 text-amber-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">Sequoia Folder</span>
@@ -306,7 +306,7 @@
                         <!-- Aztec -->
                         <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" data-sub="aztec" onclick="openGalleryModal('Aztec Cabin', 'Aztec')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-emerald-400 transition relative">
-                                <img src="Aztec/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="Aztec/1.jpg" onerror="handleCardImgError(this, 'Aztec')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-house-chimney text-4xl mb-2 text-emerald-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">Aztec Folder</span>
@@ -324,7 +324,7 @@
                         <!-- Tongva -->
                         <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" data-sub="tongva" onclick="openGalleryModal('Tongva Cabin', 'Tongva')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-emerald-400 transition relative">
-                                <img src="Tongva/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="Tongva/1.jpg" onerror="handleCardImgError(this, 'Tongva')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-house-chimney text-4xl mb-2 text-emerald-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">Tongva Folder</span>
@@ -342,7 +342,7 @@
                         <!-- Witherbee Wolf Den -->
                         <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-rose-500/50 transition cursor-pointer" data-sub="witherbee" onclick="openGalleryModal('Witherbee Wolf Den', 'Witherbee Wolf Den')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-rose-400 transition relative">
-                                <img src="Witherbee Wolf Den/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="Witherbee Wolf Den/1.jpg" onerror="handleCardImgError(this, 'Witherbee Wolf Den')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-house-chimney text-4xl mb-2 text-rose-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">Witherbee Wolf Den Folder</span>
@@ -360,7 +360,7 @@
                         <!-- Teen Center Rooms -->
                         <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-purple-500/50 transition cursor-pointer" data-sub="teencenter" onclick="openGalleryModal('Teen Center Rooms', 'Teen Center Rooms')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-purple-400 transition relative">
-                                <img src="Teen Center Rooms/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="Teen Center Rooms/1.jpg" onerror="handleCardImgError(this, 'Teen Center Rooms')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-bed text-4xl mb-2 text-purple-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">Teen Center Rooms Folder</span>
@@ -378,7 +378,7 @@
                         <!-- Crow -->
                         <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="crow" onclick="openGalleryModal('Crow Cabin', 'Crow')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
-                                <img src="Crow/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="Crow/1.jpg" onerror="handleCardImgError(this, 'Crow')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-house-chimney text-4xl mb-2 text-amber-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">Crow Folder</span>
@@ -396,7 +396,7 @@
                         <!-- The Oaks 2 -->
                         <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-sky-500/50 transition cursor-pointer" data-sub="oaks2" onclick="openGalleryModal('The Oaks 2', 'The Oaks 2')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-sky-400 transition relative">
-                                <img src="The Oaks 2/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="The Oaks 2/1.jpg" onerror="handleCardImgError(this, 'The Oaks 2')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-tree text-4xl mb-2 text-sky-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">The Oaks 2 Folder</span>
@@ -418,7 +418,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
                         <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" onclick="openGalleryModal('Common Areas', 'Common Areas')">
                             <div class="h-56 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
-                                <img src="Common Areas/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="Common Areas/1.jpg" onerror="handleCardImgError(this, 'Common Areas')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-utensils text-5xl mb-3 text-amber-400/60"></i>
                                     <span class="text-sm font-semibold text-slate-300">Common Areas Folder</span>
@@ -435,7 +435,7 @@
 
                         <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" onclick="openGalleryModal('Camp Activities', 'Camp Activities')">
                             <div class="h-56 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-emerald-400 transition relative">
-                                <img src="Camp Activities/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="Camp Activities/1.jpg" onerror="handleCardImgError(this, 'Camp Activities')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-icons text-5xl mb-3 text-emerald-400/60"></i>
                                     <span class="text-sm font-semibold text-slate-300">Camp Activities Folder</span>
@@ -457,7 +457,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" onclick="openGalleryModal('2023 Group Photos', '2023 Group Photos')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
-                                <img src="2023 Group Photos/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="2023 Group Photos/1.jpg" onerror="handleCardImgError(this, '2023 Group Photos')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-users text-4xl mb-2 text-amber-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">2023 Group Photos</span>
@@ -474,7 +474,7 @@
 
                         <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" onclick="openGalleryModal('2024 Group Photos', '2024 Group Photos')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-emerald-400 transition relative">
-                                <img src="2024 Group Photos/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="2024 Group Photos/1.jpg" onerror="handleCardImgError(this, '2024 Group Photos')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-users text-4xl mb-2 text-emerald-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">2024 Group Photos</span>
@@ -491,7 +491,7 @@
 
                         <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-sky-500/50 transition cursor-pointer" onclick="openGalleryModal('2025 Group Photos', '2025 Group Photos')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-sky-400 transition relative">
-                                <img src="2025 Group Photos/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="2025 Group Photos/1.jpg" onerror="handleCardImgError(this, '2025 Group Photos')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-users text-4xl mb-2 text-sky-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">2025 Group Photos</span>
@@ -508,7 +508,7 @@
 
                         <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-purple-500/50 transition cursor-pointer" onclick="openGalleryModal('2026 Group Photos', '2026 Group Photos')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-purple-400 transition relative">
-                                <img src="2026 Group Photos/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
+                                <img src="2026 Group Photos/1.jpg" onerror="handleCardImgError(this, '2026 Group Photos')" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
                                     <i class="fa-solid fa-users text-4xl mb-2 text-purple-400/60"></i>
                                     <span class="text-xs font-semibold text-slate-300">2026 Group Photos</span>
@@ -1678,6 +1678,23 @@
 
     <!-- JavaScript Application Logic -->
     <script>
+        const SUPPORTED_EXTENSIONS = ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG'];
+
+        // Gallery Card Thumbnail Error Handler
+        function handleCardImgError(img, folder) {
+            if (!img.dataset.extStep) img.dataset.extStep = '0';
+            let step = parseInt(img.dataset.extStep);
+            step++;
+            img.dataset.extStep = step.toString();
+
+            if (step < SUPPORTED_EXTENSIONS.length) {
+                const nextExt = SUPPORTED_EXTENSIONS[step];
+                img.src = encodeURI(`${folder}/1.${nextExt}`);
+            } else {
+                img.classList.add('hidden');
+            }
+        }
+
         // Gallery Category Switcher
         function switchGalleryCategory(cat) {
             document.querySelectorAll('.gallery-category-panel').forEach(panel => panel.classList.add('hidden'));
@@ -1711,14 +1728,22 @@
             });
         }
 
-        // Multi-Photo Lightbox Logic with Smart Dynamic Folder Limit Detection
+        // Multi-Photo Lightbox Logic with Smart Dynamic Extension & Folder Limit Detection
         let galleryCurrentFolder = '';
         let galleryCurrentIndex = 1;
         let galleryFolderMax = {}; // Caches detected max photos per folder: { 'Aztec': 6 }
+        let galleryFolderExt = {}; // Caches working extension per folder: { 'Aztec': 'JPG' }
+        let currentExtIndex = 0;
 
         function openGalleryModal(title, folderPath) {
             galleryCurrentFolder = folderPath;
             galleryCurrentIndex = 1;
+            
+            // Clear prior zero-cache on explicit user click so it re-verifies
+            if (galleryFolderMax[folderPath] === 0) {
+                delete galleryFolderMax[folderPath];
+            }
+
             document.getElementById('lightbox-title').innerText = title;
             document.getElementById('gallery-lightbox').classList.remove('hidden');
             loadGalleryImage(0);
@@ -1732,16 +1757,12 @@
 
             const knownMax = galleryFolderMax[galleryCurrentFolder];
 
-            // If we know the max photos and user exceeds it moving forward, wrap back to 1
             if (knownMax && galleryCurrentIndex > knownMax) {
                 galleryCurrentIndex = 1;
             }
-            // If user goes below 1, wrap to known max (or stay at 1)
             if (galleryCurrentIndex < 1) {
                 galleryCurrentIndex = knownMax ? knownMax : 1;
             }
-
-            const imgPath = `${galleryCurrentFolder}/${galleryCurrentIndex}.jpg`;
 
             if (knownMax) {
                 counterEl.innerText = `Photo ${galleryCurrentIndex} of ${knownMax}`;
@@ -1749,38 +1770,56 @@
                 counterEl.innerText = `Photo ${galleryCurrentIndex}`;
             }
 
-            imgEl.onerror = function() {
-                // Image failed to load!
-                if (galleryCurrentIndex > 1) {
-                    // We hit the end of the folder! Record the previous photo as max
-                    const maxFound = galleryCurrentIndex - 1;
-                    galleryFolderMax[galleryCurrentFolder] = maxFound;
+            // Determine extensions order to try
+            const preferredExt = galleryFolderExt[galleryCurrentFolder];
+            let extsToTry = preferredExt 
+                ? [preferredExt, ...SUPPORTED_EXTENSIONS.filter(e => e !== preferredExt)]
+                : SUPPORTED_EXTENSIONS;
 
-                    if (direction > 0) {
-                        // User clicked Next past the last photo -> wrap smoothly to Photo 1
-                        galleryCurrentIndex = 1;
-                        loadGalleryImage(0);
+            currentExtIndex = 0;
+
+            function tryNextExtension() {
+                if (currentExtIndex >= extsToTry.length) {
+                    // All extensions failed for this index
+                    if (galleryCurrentIndex > 1) {
+                        const maxFound = galleryCurrentIndex - 1;
+                        galleryFolderMax[galleryCurrentFolder] = maxFound;
+
+                        if (direction > 0) {
+                            galleryCurrentIndex = 1;
+                            loadGalleryImage(0);
+                        } else {
+                            galleryCurrentIndex = maxFound;
+                            loadGalleryImage(0);
+                        }
                     } else {
-                        // Step back to last known valid photo
-                        galleryCurrentIndex = maxFound;
-                        loadGalleryImage(0);
+                        galleryFolderMax[galleryCurrentFolder] = 0;
+                        imgEl.classList.add('hidden');
+                        placeholderEl.classList.remove('hidden');
+                        placeholderText.innerText = `No photos found in folder "${galleryCurrentFolder}".`;
+                        counterEl.innerText = `No Photos`;
                     }
-                } else {
-                    // First image failed (folder empty or no 1.jpg)
-                    galleryFolderMax[galleryCurrentFolder] = 0;
-                    imgEl.classList.add('hidden');
-                    placeholderEl.classList.remove('hidden');
-                    placeholderText.innerText = `No photos found in folder "${galleryCurrentFolder}".`;
-                    counterEl.innerText = `No Photos`;
+                    return;
                 }
-            };
 
-            imgEl.onload = function() {
-                imgEl.classList.remove('hidden');
-                placeholderEl.classList.add('hidden');
-            };
+                const ext = extsToTry[currentExtIndex];
+                const imgPath = encodeURI(`${galleryCurrentFolder}/${galleryCurrentIndex}.${ext}`);
 
-            imgEl.src = imgPath;
+                imgEl.onerror = function() {
+                    currentExtIndex++;
+                    tryNextExtension();
+                };
+
+                imgEl.onload = function() {
+                    galleryFolderExt[galleryCurrentFolder] = ext; // Cache working extension!
+                    imgEl.classList.remove('hidden');
+                    placeholderEl.classList.add('hidden');
+                };
+
+                imgEl.src = imgPath;
+            }
+
+            tryNextExtension();
         }
 
         function navigatePhoto(direction) {
