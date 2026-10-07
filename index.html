@@ -177,7 +177,7 @@
                 <div class="text-center max-w-3xl mx-auto mb-10">
                     <span class="text-purple-400 text-xs font-bold uppercase tracking-widest">Explore Camp Bob Waldorf</span>
                     <h2 class="text-3xl sm:text-4xl font-bold font-heading mt-2 mb-4">Retreat Photo Gallery</h2>
-                    <p class="text-slate-400">Take a tour of our cabin accommodations, camp common grounds, and favorite moments from past GMCLA retreats.</p>
+                    <p class="text-slate-400">Take a tour of our cabin accommodations, camp common grounds, and favorite moments from past GMCLA retreats. Click any folder to browse through all available photos!</p>
                 </div>
 
                 <!-- Main Category Tabs -->
@@ -214,7 +214,7 @@
                     <!-- Photo Grid Container -->
                     <div id="cabin-gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         <!-- Powhatan -->
-                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="powhatan" onclick="openLightbox('Powhatan Cabin', 'Powhatan/1.jpg')">
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="powhatan" onclick="openGalleryModal('Powhatan Cabin', 'Powhatan')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
                                 <img src="Powhatan/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -227,12 +227,12 @@
                                     <h4 class="text-sm font-bold text-white">Powhatan Cabin</h4>
                                     <p class="text-xs text-slate-400">Standard Tier • 14 Beds</p>
                                 </div>
-                                <span class="text-xs text-amber-400 font-semibold">View Photos</span>
+                                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i> View Photos</span>
                             </div>
                         </div>
 
                         <!-- Shoshone -->
-                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="shoshone" onclick="openLightbox('Shoshone Cabin', 'Shoshone/1.jpg')">
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="shoshone" onclick="openGalleryModal('Shoshone Cabin', 'Shoshone')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
                                 <img src="Shoshone/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -245,12 +245,12 @@
                                     <h4 class="text-sm font-bold text-white">Shoshone Cabin</h4>
                                     <p class="text-xs text-slate-400">Standard Tier • 14 Beds</p>
                                 </div>
-                                <span class="text-xs text-amber-400 font-semibold">View Photos</span>
+                                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i> View Photos</span>
                             </div>
                         </div>
 
                         <!-- Iroquois -->
-                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-purple-500/50 transition cursor-pointer" data-sub="iroquois" onclick="openLightbox('Iroquois Cabin (Substance-Free)', 'Iroquois/1.jpg')">
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-purple-500/50 transition cursor-pointer" data-sub="iroquois" onclick="openGalleryModal('Iroquois Cabin (Substance-Free)', 'Iroquois')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-purple-400 transition relative">
                                 <img src="Iroquois/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -263,12 +263,12 @@
                                     <h4 class="text-sm font-bold text-white">Iroquois Cabin</h4>
                                     <p class="text-xs text-slate-400">Standard Tier • Substance-Free</p>
                                 </div>
-                                <span class="text-xs text-purple-400 font-semibold">View Photos</span>
+                                <span class="text-xs text-purple-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i> View Photos</span>
                             </div>
                         </div>
 
                         <!-- Wangari -->
-                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="wangari" onclick="openLightbox('Wangari Cabin', 'Wangari/1.jpg')">
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="wangari" onclick="openGalleryModal('Wangari Cabin', 'Wangari')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
                                 <img src="Wangari/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -281,12 +281,12 @@
                                     <h4 class="text-sm font-bold text-white">Wangari Cabin</h4>
                                     <p class="text-xs text-slate-400">Standard Tier • 20 Beds</p>
                                 </div>
-                                <span class="text-xs text-amber-400 font-semibold">View Photos</span>
+                                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i> View Photos</span>
                             </div>
                         </div>
 
                         <!-- Sequoia -->
-                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="sequoia" onclick="openLightbox('Sequoia Cabin', 'Sequoia/1.jpg')">
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="sequoia" onclick="openGalleryModal('Sequoia Cabin', 'Sequoia')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
                                 <img src="Sequoia/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -299,12 +299,12 @@
                                     <h4 class="text-sm font-bold text-white">Sequoia Cabin</h4>
                                     <p class="text-xs text-slate-400">Standard Tier • 20 Beds</p>
                                 </div>
-                                <span class="text-xs text-amber-400 font-semibold">View Photos</span>
+                                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i> View Photos</span>
                             </div>
                         </div>
 
                         <!-- Aztec -->
-                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" data-sub="aztec" onclick="openLightbox('Aztec Cabin', 'Aztec/1.jpg')">
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" data-sub="aztec" onclick="openGalleryModal('Aztec Cabin', 'Aztec')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-emerald-400 transition relative">
                                 <img src="Aztec/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -317,12 +317,12 @@
                                     <h4 class="text-sm font-bold text-white">Aztec Cabin</h4>
                                     <p class="text-xs text-slate-400">Cabin Plus • Attached Bathroom</p>
                                 </div>
-                                <span class="text-xs text-emerald-400 font-semibold">View Photos</span>
+                                <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i> View Photos</span>
                             </div>
                         </div>
 
                         <!-- Tongva -->
-                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" data-sub="tongva" onclick="openLightbox('Tongva Cabin', 'Tongva/1.jpg')">
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" data-sub="tongva" onclick="openGalleryModal('Tongva Cabin', 'Tongva')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-emerald-400 transition relative">
                                 <img src="Tongva/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -335,12 +335,12 @@
                                     <h4 class="text-sm font-bold text-white">Tongva Cabin</h4>
                                     <p class="text-xs text-slate-400">Cabin Plus • Attached Bathroom</p>
                                 </div>
-                                <span class="text-xs text-emerald-400 font-semibold">View Photos</span>
+                                <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i> View Photos</span>
                             </div>
                         </div>
 
                         <!-- Witherbee Wolf Den -->
-                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-rose-500/50 transition cursor-pointer" data-sub="witherbee" onclick="openLightbox('Witherbee Wolf Den', 'Witherbee Wolf Den/1.jpg')">
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-rose-500/50 transition cursor-pointer" data-sub="witherbee" onclick="openGalleryModal('Witherbee Wolf Den', 'Witherbee Wolf Den')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-rose-400 transition relative">
                                 <img src="Witherbee Wolf Den/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -353,12 +353,12 @@
                                     <h4 class="text-sm font-bold text-white">Witherbee Wolf Den</h4>
                                     <p class="text-xs text-slate-400">Multi-Room Lodge Tier</p>
                                 </div>
-                                <span class="text-xs text-rose-400 font-semibold">View Photos</span>
+                                <span class="text-xs text-rose-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i> View Photos</span>
                             </div>
                         </div>
 
                         <!-- Teen Center Rooms -->
-                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-purple-500/50 transition cursor-pointer" data-sub="teencenter" onclick="openLightbox('Teen Center Rooms', 'Teen Center Rooms/1.jpg')">
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-purple-500/50 transition cursor-pointer" data-sub="teencenter" onclick="openGalleryModal('Teen Center Rooms', 'Teen Center Rooms')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-purple-400 transition relative">
                                 <img src="Teen Center Rooms/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -371,12 +371,12 @@
                                     <h4 class="text-sm font-bold text-white">Teen Center Rooms</h4>
                                     <p class="text-xs text-slate-400">Semi-Private Basic Wing</p>
                                 </div>
-                                <span class="text-xs text-purple-400 font-semibold">View Photos</span>
+                                <span class="text-xs text-purple-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i> View Photos</span>
                             </div>
                         </div>
 
                         <!-- Crow -->
-                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="crow" onclick="openLightbox('Crow Cabin', 'Crow/1.jpg')">
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" data-sub="crow" onclick="openGalleryModal('Crow Cabin', 'Crow')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
                                 <img src="Crow/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -389,12 +389,12 @@
                                     <h4 class="text-sm font-bold text-white">Crow Cabin</h4>
                                     <p class="text-xs text-slate-400">Staff & Leader Lodging</p>
                                 </div>
-                                <span class="text-xs text-amber-400 font-semibold">View Photos</span>
+                                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i> View Photos</span>
                             </div>
                         </div>
 
                         <!-- The Oaks 2 -->
-                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-sky-500/50 transition cursor-pointer" data-sub="oaks2" onclick="openLightbox('The Oaks 2', 'The Oaks 2/1.jpg')">
+                        <div class="cabin-photo-card glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-sky-500/50 transition cursor-pointer" data-sub="oaks2" onclick="openGalleryModal('The Oaks 2', 'The Oaks 2')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-sky-400 transition relative">
                                 <img src="The Oaks 2/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -407,7 +407,7 @@
                                     <h4 class="text-sm font-bold text-white">The Oaks 2</h4>
                                     <p class="text-xs text-slate-400">Lodge Accommodations</p>
                                 </div>
-                                <span class="text-xs text-sky-400 font-semibold">View Photos</span>
+                                <span class="text-xs text-sky-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i> View Photos</span>
                             </div>
                         </div>
                     </div>
@@ -416,7 +416,7 @@
                 <!-- CATEGORY 2: CAMP COMMON AREAS & ACTIVITIES -->
                 <div id="gallery-category-common" class="gallery-category-panel hidden space-y-8">
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" onclick="openLightbox('Common Areas', 'Common Areas/1.jpg')">
+                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" onclick="openGalleryModal('Common Areas', 'Common Areas')">
                             <div class="h-56 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
                                 <img src="Common Areas/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -429,11 +429,11 @@
                                     <h4 class="text-base font-bold text-white">Common Areas</h4>
                                     <p class="text-xs text-slate-400">Dining Hall, MAC Rehearsal Center & Grounds</p>
                                 </div>
-                                <span class="text-xs text-amber-400 font-semibold">View Folder Photos</span>
+                                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i> View Folder Photos</span>
                             </div>
                         </div>
 
-                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" onclick="openLightbox('Camp Activities', 'Camp Activities/1.jpg')">
+                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" onclick="openGalleryModal('Camp Activities', 'Camp Activities')">
                             <div class="h-56 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-emerald-400 transition relative">
                                 <img src="Camp Activities/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -446,7 +446,7 @@
                                     <h4 class="text-base font-bold text-white">Camp Activities</h4>
                                     <p class="text-xs text-slate-400">Sports, Games, Parties & Talent Shows</p>
                                 </div>
-                                <span class="text-xs text-emerald-400 font-semibold">View Folder Photos</span>
+                                <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i> View Folder Photos</span>
                             </div>
                         </div>
                     </div>
@@ -455,7 +455,7 @@
                 <!-- CATEGORY 3: RETREATS OF YEARS PAST -->
                 <div id="gallery-category-past" class="gallery-category-panel hidden space-y-8">
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" onclick="openLightbox('2023 Group Photos', '2023 Group Photos/1.jpg')">
+                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-amber-500/50 transition cursor-pointer" onclick="openGalleryModal('2023 Group Photos', '2023 Group Photos')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-amber-400 transition relative">
                                 <img src="2023 Group Photos/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -463,13 +463,16 @@
                                     <span class="text-xs font-semibold text-slate-300">2023 Group Photos</span>
                                 </div>
                             </div>
-                            <div class="p-4 bg-slate-950/80">
-                                <h4 class="text-sm font-bold text-white">2023 Retreat Highlights</h4>
-                                <p class="text-xs text-slate-400">Memories from 2023</p>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">2023 Highlights</h4>
+                                    <p class="text-xs text-slate-400">Retreat memories from 2023</p>
+                                </div>
+                                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i></span>
                             </div>
                         </div>
 
-                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" onclick="openLightbox('2024 Group Photos', '2024 Group Photos/1.jpg')">
+                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-emerald-500/50 transition cursor-pointer" onclick="openGalleryModal('2024 Group Photos', '2024 Group Photos')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-emerald-400 transition relative">
                                 <img src="2024 Group Photos/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -477,13 +480,16 @@
                                     <span class="text-xs font-semibold text-slate-300">2024 Group Photos</span>
                                 </div>
                             </div>
-                            <div class="p-4 bg-slate-950/80">
-                                <h4 class="text-sm font-bold text-white">2024 Retreat Highlights</h4>
-                                <p class="text-xs text-slate-400">Memories from 2024</p>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">2024 Highlights</h4>
+                                    <p class="text-xs text-slate-400">Retreat memories from 2024</p>
+                                </div>
+                                <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i></span>
                             </div>
                         </div>
 
-                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-sky-500/50 transition cursor-pointer" onclick="openLightbox('2025 Group Photos', '2025 Group Photos/1.jpg')">
+                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-sky-500/50 transition cursor-pointer" onclick="openGalleryModal('2025 Group Photos', '2025 Group Photos')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-sky-400 transition relative">
                                 <img src="2025 Group Photos/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -491,13 +497,16 @@
                                     <span class="text-xs font-semibold text-slate-300">2025 Group Photos</span>
                                 </div>
                             </div>
-                            <div class="p-4 bg-slate-950/80">
-                                <h4 class="text-sm font-bold text-white">2025 Retreat Highlights</h4>
-                                <p class="text-xs text-slate-400">Memories from 2025</p>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">2025 Highlights</h4>
+                                    <p class="text-xs text-slate-400">Retreat memories from 2025</p>
+                                </div>
+                                <span class="text-xs text-sky-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i></span>
                             </div>
                         </div>
 
-                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-purple-500/50 transition cursor-pointer" onclick="openLightbox('2026 Group Photos', '2026 Group Photos/1.jpg')">
+                        <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 group hover:border-purple-500/50 transition cursor-pointer" onclick="openGalleryModal('2026 Group Photos', '2026 Group Photos')">
                             <div class="h-48 bg-slate-950 flex flex-col items-center justify-center text-slate-500 group-hover:text-purple-400 transition relative">
                                 <img src="2026 Group Photos/1.jpg" onerror="this.onerror=null; this.src=''; this.classList.add('hidden');" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/80 -z-10">
@@ -505,9 +514,12 @@
                                     <span class="text-xs font-semibold text-slate-300">2026 Group Photos</span>
                                 </div>
                             </div>
-                            <div class="p-4 bg-slate-950/80">
-                                <h4 class="text-sm font-bold text-white">2026 Retreat Highlights</h4>
-                                <p class="text-xs text-slate-400">Memories from 2026</p>
+                            <div class="p-4 bg-slate-950/80 flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">2026 Highlights</h4>
+                                    <p class="text-xs text-slate-400">Retreat memories from 2026</p>
+                                </div>
+                                <span class="text-xs text-purple-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-images"></i></span>
                             </div>
                         </div>
                     </div>
@@ -516,22 +528,51 @@
             </div>
         </section>
 
-        <!-- Image Lightbox Modal -->
-        <div id="gallery-lightbox" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4" onclick="closeLightbox()">
-            <div class="max-w-4xl w-full bg-slate-900 border border-slate-700 rounded-3xl p-4 sm:p-6 space-y-4 relative" onclick="event.stopPropagation()">
+        <!-- Interactive Multi-Photo Lightbox Modal -->
+        <div id="gallery-lightbox" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-2 sm:p-4" onclick="closeLightbox()">
+            <div class="max-w-5xl w-full bg-slate-900 border border-slate-700 rounded-3xl p-4 sm:p-6 space-y-4 relative shadow-2xl" onclick="event.stopPropagation()">
+                
+                <!-- Modal Header -->
                 <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-                    <h3 id="lightbox-title" class="text-lg font-bold text-white font-heading">Photo View</h3>
-                    <button onclick="closeLightbox()" class="text-slate-400 hover:text-white text-xl p-1">
+                    <div class="flex items-center space-x-3">
+                        <h3 id="lightbox-title" class="text-lg font-bold text-white font-heading">Photo View</h3>
+                        <span id="lightbox-counter" class="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-slate-800 text-amber-400 border border-slate-700">Photo 1</span>
+                    </div>
+                    <button onclick="closeLightbox()" class="text-slate-400 hover:text-white text-xl p-1.5 rounded-xl hover:bg-slate-800 transition">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>
-                <div class="rounded-2xl overflow-hidden bg-slate-950 min-h-[300px] max-h-[70vh] flex items-center justify-center p-4">
-                    <img id="lightbox-img" src="" alt="Gallery Image" class="max-w-full max-h-[65vh] object-contain rounded-xl hidden" />
-                    <div id="lightbox-placeholder" class="text-center p-8 text-slate-500">
+
+                <!-- Main Image Display Container with Navigation Controls -->
+                <div class="relative rounded-2xl overflow-hidden bg-slate-950 min-h-[350px] max-h-[75vh] flex items-center justify-center p-2">
+                    
+                    <!-- Left Arrow Button -->
+                    <button onclick="navigatePhoto(-1)" class="absolute left-3 z-10 p-3 rounded-full bg-slate-900/80 hover:bg-slate-800 text-white border border-slate-700 hover:border-amber-400/50 shadow-lg transition hover:scale-110">
+                        <i class="fa-solid fa-chevron-left text-lg"></i>
+                    </button>
+
+                    <!-- Image Element -->
+                    <img id="lightbox-img" src="" alt="Gallery Image" class="max-w-full max-h-[70vh] object-contain rounded-xl transition-all duration-200" />
+                    
+                    <!-- Placeholder when photo is not found -->
+                    <div id="lightbox-placeholder" class="text-center p-8 text-slate-500 hidden">
                         <i class="fa-solid fa-folder-open text-5xl mb-3 text-amber-400/60"></i>
-                        <p id="lightbox-placeholder-text" class="text-sm font-medium text-slate-300">Photo folder path ready to load.</p>
+                        <p id="lightbox-placeholder-text" class="text-sm font-medium text-slate-300">Photo path ready to load.</p>
+                        <p class="text-xs text-slate-500 mt-2">Place files named 1.jpg, 2.jpg, 3.jpg, etc. inside this folder.</p>
                     </div>
+
+                    <!-- Right Arrow Button -->
+                    <button onclick="navigatePhoto(1)" class="absolute right-3 z-10 p-3 rounded-full bg-slate-900/80 hover:bg-slate-800 text-white border border-slate-700 hover:border-amber-400/50 shadow-lg transition hover:scale-110">
+                        <i class="fa-solid fa-chevron-right text-lg"></i>
+                    </button>
                 </div>
+
+                <!-- Lightbox Footer / Instructions -->
+                <div class="flex justify-between items-center text-xs text-slate-400 pt-1">
+                    <span><i class="fa-regular fa-keyboard mr-1 text-slate-500"></i> Use <strong>Left</strong> & <strong>Right</strong> arrow keys to browse photos</span>
+                    <button onclick="closeLightbox()" class="text-amber-400 hover:underline font-semibold">Close Viewer</button>
+                </div>
+
             </div>
         </div>
 
@@ -1670,21 +1711,33 @@
             });
         }
 
-        // Lightbox Popup
-        function openLightbox(title, folderPath) {
-            const modal = document.getElementById('gallery-lightbox');
-            const titleEl = document.getElementById('lightbox-title');
+        // Multi-Photo Interactive Gallery Lightbox Logic
+        let galleryCurrentFolder = '';
+        let galleryCurrentIndex = 1;
+        let galleryMaxPhotos = 15; // Checks up to 15 photos per folder
+
+        function openGalleryModal(title, folderPath) {
+            galleryCurrentFolder = folderPath;
+            galleryCurrentIndex = 1;
+            document.getElementById('lightbox-title').innerText = title;
+            document.getElementById('gallery-lightbox').classList.remove('hidden');
+            loadGalleryImage();
+        }
+
+        function loadGalleryImage() {
             const imgEl = document.getElementById('lightbox-img');
             const placeholderEl = document.getElementById('lightbox-placeholder');
             const placeholderText = document.getElementById('lightbox-placeholder-text');
+            const counterEl = document.getElementById('lightbox-counter');
 
-            titleEl.innerText = title;
+            const imgPath = `${galleryCurrentFolder}/${galleryCurrentIndex}.jpg`;
+            counterEl.innerText = `Photo ${galleryCurrentIndex}`;
 
-            // Attempt to load image from folder path
             imgEl.onerror = function() {
+                // If photo doesn't exist, show helpful placeholder
                 imgEl.classList.add('hidden');
                 placeholderEl.classList.remove('hidden');
-                placeholderText.innerText = `Folder Location: "${folderPath}" (Place photo files inside this folder)`;
+                placeholderText.innerText = `Photo "${imgPath}" not found.`;
             };
 
             imgEl.onload = function() {
@@ -1692,13 +1745,34 @@
                 placeholderEl.classList.add('hidden');
             };
 
-            imgEl.src = folderPath;
-            modal.classList.remove('hidden');
+            imgEl.src = imgPath;
+        }
+
+        function navigatePhoto(direction) {
+            galleryCurrentIndex += direction;
+            if (galleryCurrentIndex < 1) {
+                galleryCurrentIndex = 1;
+            }
+            loadGalleryImage();
         }
 
         function closeLightbox() {
             document.getElementById('gallery-lightbox').classList.add('hidden');
         }
+
+        // Keyboard Arrow & Escape Navigation Listener
+        document.addEventListener('keydown', function(event) {
+            const lightbox = document.getElementById('gallery-lightbox');
+            if (lightbox && !lightbox.classList.contains('hidden')) {
+                if (event.key === 'ArrowRight') {
+                    navigatePhoto(1);
+                } else if (event.key === 'ArrowLeft') {
+                    navigatePhoto(-1);
+                } else if (event.key === 'Escape') {
+                    closeLightbox();
+                }
+            }
+        });
 
         // Room Select Price & Multi-bed Roommate Field Generator
         function handleRoomSelectChange() {
