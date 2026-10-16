@@ -2345,8 +2345,69 @@
             closeSheetsModal();
         }
 
-        // Registration Submission Logic
+        // Registration Submission Logic & Local Inventory
         let existingRegistrations = JSON.parse(localStorage.getItem('gmcla_registered_emails') || '[]');
+
+        // --- NEW: Local Inventory Tracking System ---
+        const initialInventory = {
+            'standard-powhatan': { count: 14, text: 'Beds', type: 'bed' },
+            'standard-shoshone': { count: 14, text: 'Beds', type: 'bed' },
+            'standard-iroquois': { count: 14, text: 'Beds', type: 'bed' },
+            'standard-wangari': { count: 20, text: 'Beds', type: 'bed' },
+            'standard-sequoia': { count: 20, text: 'Beds', type: 'bed' },
+            'plus-aztec': { count: 15, text: 'Beds', type: 'bed' },
+            'plus-tongva': { count: 15, text: 'Beds', type: 'bed' },
+            'witherbee-rm1': { count: 1, text: 'Room (3 Beds)', type: 'room' },
+            'witherbee-rm2': { count: 5, text: 'Beds', type: 'bed' },
+            'witherbee-rm3': { count: 7, text: 'Beds', type: 'bed' },
+            'semi-basic-rm1': { count: 1, text: 'Room (3 Beds)', type: 'room' },
+            'semi-basic-rm2': { count: 1, text: 'Room (2 Beds)', type: 'room' },
+            'semi-basic-rm3': { count: 1, text: 'Room (2 Beds)', type: 'room' },
+            'semi-plus-rm1': { count: 1, text: 'Room (3 Beds)', type: 'room' },
+            'semi-plus-rm2': { count: 1, text: 'Room (2 Beds)', type: 'room' },
+            'semi-plus-rm3': { count: 1, text: 'Room (3 Beds)', type: 'room' },
+            'day-full': { count: 'Unlimited', text: '', type: 'unlimited' },
+            'day-sat': { count: 'Unlimited', text: '', type: 'unlimited' }
+        };
+
+        function updateInventoryUI() {
+            let currentInventory = JSON.parse(localStorage.getItem('gmcla_inventory')) || initialInventory;
+            
+            for (const [roomVal, data] of Object.entries(currentInventory)) {
+                const card = document.querySelector(`.acc-card[data-val="${roomVal}"]`);
+                if (card) {
+                    const countSpan = card.querySelector('.flex.flex-col span:last-child');
+                    if (countSpan) {
+                        if (data.type === 'unlimited') {
+                            countSpan.innerText = 'Unlimited';
+                            countSpan.className = 'text-xs font-bold text-sky-400';
+                        } else if (data.count > 0) {
+                            countSpan.innerText = `${data.count} ${data.text}`;
+                            countSpan.className = 'text-[11px] font-bold text-emerald-400';
+                            card.classList.remove('opacity-50', 'pointer-events-none', 'grayscale');
+                        } else {
+                            countSpan.innerText = 'SOLD OUT';
+                            countSpan.className = 'text-xs font-black text-rose-500';
+                            // Visually disable the card
+                            card.classList.add('opacity-50', 'pointer-events-none', 'grayscale');
+                            card.classList.remove('border-amber-400', 'bg-slate-900');
+                        }
+                    }
+                    
+                    // Also disable the hidden select option so it cannot be forced
+                    const selectOpt = document.querySelector(`#reg-room-select option[value="${roomVal}"]`);
+                    if (selectOpt && data.count === 0) {
+                        selectOpt.disabled = true;
+                        if (!selectOpt.text.includes('(SOLD OUT)')) {
+                            selectOpt.text = `(SOLD OUT) ${selectOpt.text}`;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Run UI update on page load
+        updateInventoryUI();
 
         function handleRegistrationSubmit(e) {
             e.preventDefault();
@@ -2438,6 +2499,19 @@
             });
 
             localStorage.setItem('gmcla_registered_emails', JSON.stringify(existingRegistrations));
+
+            // --- NEW: Deduct Inventory locally and update UI ---
+            let currentInventory = JSON.parse(localStorage.getItem('gmcla_inventory')) || initialInventory;
+            if (currentInventory[roomSelect.value] && currentInventory[roomSelect.value].type !== 'unlimited') {
+                // If it's a bed tier, deduct the amount of people. If it's a room tier, deduct 1 room.
+                let deduction = (currentInventory[roomSelect.value].type === 'bed') ? registrants.length : 1;
+                
+                currentInventory[roomSelect.value].count -= deduction;
+                if (currentInventory[roomSelect.value].count < 0) currentInventory[roomSelect.value].count = 0;
+                
+                localStorage.setItem('gmcla_inventory', JSON.stringify(currentInventory));
+                updateInventoryUI(); // Refresh the visual cards immediately
+            }
 
             // Display Confirmation UI
             document.getElementById('retreat-reg-form').classList.add('hidden');
