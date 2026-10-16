@@ -43,6 +43,13 @@
         ::-webkit-scrollbar-track { background: #090D16; }
         ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #334155; }
+        
+        /* Custom scrollbar for the new inventory panel */
+        .inventory-scroll::-webkit-scrollbar { width: 6px; }
+        .inventory-scroll::-webkit-scrollbar-track { background: transparent; }
+        .inventory-scroll::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
+        .inventory-scroll::-webkit-scrollbar-thumb:hover { background: #F59E0B; }
+
         .rainbow-border { background: linear-gradient(90deg, #EF4444, #F59E0B, #10B981, #3B82F6, #8B5CF6); }
         .rainbow-text {
             background: linear-gradient(135deg, #F59E0B 0%, #EF4444 35%, #8B5CF6 70%, #3B82F6 100%);
@@ -1484,11 +1491,328 @@
                                     </select>
                                 </div>
 
+                                <!-- NEW VISUAL INVENTORY LAYOUT -->
                                 <div>
-                                    <label class="block text-xs font-semibold text-amber-400 mb-2 uppercase">Select Accommodation *</label>
-                                    <select id="reg-room-select" onchange="handleRoomSelectChange()" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-amber-500/50 text-white font-medium focus:outline-none focus:border-amber-400 transition">
-                                        <option value="" data-price="0" data-beds="1">-- Select Specific Room / Cabin / Pass --</option>
+                                    <div class="flex items-center justify-between mb-3">
+                                        <label class="block text-xs font-semibold text-amber-400 uppercase">Select Accommodation *</label>
+                                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold flex items-center">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5"></span> Live Inventory
+                                        </span>
+                                    </div>
+                                    
+                                    <div class="inventory-scroll pr-2 max-h-[400px] overflow-y-auto space-y-6 bg-slate-950/60 p-4 rounded-2xl border border-slate-800/80 shadow-inner">
                                         
+                                        <!-- Standard Cabins ($190/person) -->
+                                        <div>
+                                            <h4 class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5 flex items-center"><i class="fa-solid fa-campground mr-1.5"></i> Standard Cabins ($190)</h4>
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="standard-powhatan" onclick="selectVisualAccommodation('standard-powhatan')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Powhatan</h5>
+                                                        <div class="text-[10px] text-slate-400 font-medium">Standard Cabin</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-xs font-bold text-emerald-400">14 Beds</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-amber-400">$190</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="standard-shoshone" onclick="selectVisualAccommodation('standard-shoshone')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Shoshone</h5>
+                                                        <div class="text-[10px] text-slate-400 font-medium">Standard Cabin</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-xs font-bold text-emerald-400">14 Beds</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-amber-400">$190</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="standard-iroquois" onclick="selectVisualAccommodation('standard-iroquois')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Iroquois</h5>
+                                                        <div class="text-[10px] text-purple-400 font-bold">Substance-Free</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-xs font-bold text-emerald-400">14 Beds</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-amber-400">$190</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="standard-wangari" onclick="selectVisualAccommodation('standard-wangari')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Wangari</h5>
+                                                        <div class="text-[10px] text-slate-400 font-medium">Standard Cabin</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-xs font-bold text-emerald-400">20 Beds</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-amber-400">$190</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="standard-sequoia" onclick="selectVisualAccommodation('standard-sequoia')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Sequoia</h5>
+                                                        <div class="text-[10px] text-slate-400 font-medium">Standard Cabin</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-xs font-bold text-emerald-400">20 Beds</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-amber-400">$190</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Cabin Plus - Attached Restroom ($210/person) -->
+                                        <div>
+                                            <h4 class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5 flex items-center"><i class="fa-solid fa-house-medical mr-1.5"></i> Cabin Plus ($210)</h4>
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="plus-aztec" onclick="selectVisualAccommodation('plus-aztec')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Aztec</h5>
+                                                        <div class="text-[10px] text-slate-400 font-medium">Attached Restroom</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-xs font-bold text-emerald-400">15 Beds</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-emerald-400">$210</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="plus-tongva" onclick="selectVisualAccommodation('plus-tongva')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Tongva</h5>
+                                                        <div class="text-[10px] text-slate-400 font-medium">Attached Restroom</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-xs font-bold text-emerald-400">15 Beds</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-emerald-400">$210</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Witherbee Wolfe Den ($230/person) -->
+                                        <div>
+                                            <h4 class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5 flex items-center"><i class="fa-solid fa-house-user mr-1.5"></i> Witherbee Wolfe Den ($230)</h4>
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="witherbee-rm1" onclick="selectVisualAccommodation('witherbee-rm1')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Room 1</h5>
+                                                        <div class="text-[10px] text-rose-400 font-semibold mb-1 leading-tight">Must Reserve Full Room</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-[11px] font-bold text-emerald-400">1 Room (3 Beds)</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-rose-400">$230</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="witherbee-rm2" onclick="selectVisualAccommodation('witherbee-rm2')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Room 2</h5>
+                                                        <div class="text-[10px] text-slate-400 font-medium">Individual Bed Selection</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-xs font-bold text-emerald-400">5 Beds</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-rose-400">$230</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="witherbee-rm3" onclick="selectVisualAccommodation('witherbee-rm3')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Room 3</h5>
+                                                        <div class="text-[10px] text-slate-400 font-medium">Individual Bed Selection</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-xs font-bold text-emerald-400">7 Beds</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-rose-400">$230</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Semi-Private Basic - Teen Center ($260/person) -->
+                                        <div>
+                                            <h4 class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5 flex items-center"><i class="fa-solid fa-door-closed mr-1.5"></i> Semi-Private Basic ($260)</h4>
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="semi-basic-rm1" onclick="selectVisualAccommodation('semi-basic-rm1')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Room 1</h5>
+                                                        <div class="text-[10px] text-rose-400 font-semibold mb-1 leading-tight">Must Reserve Full Room</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-[11px] font-bold text-emerald-400">1 Room (3 Beds)</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-purple-400">$260</span>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="semi-basic-rm2" onclick="selectVisualAccommodation('semi-basic-rm2')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Room 2</h5>
+                                                        <div class="text-[10px] text-rose-400 font-semibold mb-1 leading-tight">Must Reserve Full Room</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-[11px] font-bold text-emerald-400">1 Room (2 Beds)</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-purple-400">$260</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="semi-basic-rm3" onclick="selectVisualAccommodation('semi-basic-rm3')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Room 3</h5>
+                                                        <div class="text-[10px] text-rose-400 font-semibold mb-1 leading-tight">Must Reserve Full Room</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-[11px] font-bold text-emerald-400">1 Room (2 Beds)</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-purple-400">$260</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Semi-Private Plus - Main Lodge ($275/person) -->
+                                        <div>
+                                            <h4 class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5 flex items-center"><i class="fa-solid fa-couch mr-1.5"></i> Semi-Private Plus ($275)</h4>
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="semi-plus-rm1" onclick="selectVisualAccommodation('semi-plus-rm1')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Bedroom 1</h5>
+                                                        <div class="text-[10px] text-rose-400 font-semibold mb-1 leading-tight">Must Reserve Full Room</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-[11px] font-bold text-emerald-400">1 Room (3 Beds)</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-amber-400">$275</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="semi-plus-rm2" onclick="selectVisualAccommodation('semi-plus-rm2')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Bedroom 2</h5>
+                                                        <div class="text-[10px] text-rose-400 font-semibold mb-1 leading-tight">Must Reserve Full Room</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-[11px] font-bold text-emerald-400">1 Room (2 Beds)</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-amber-400">$275</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="semi-plus-rm3" onclick="selectVisualAccommodation('semi-plus-rm3')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Bedroom 3</h5>
+                                                        <div class="text-[10px] text-rose-400 font-semibold mb-1 leading-tight">Must Reserve Full Room</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-[11px] font-bold text-emerald-400">1 Room (3 Beds)</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-amber-400">$275</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Commuter Day Passes (No Overnight) -->
+                                        <div>
+                                            <h4 class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5 flex items-center"><i class="fa-solid fa-ticket mr-1.5"></i> Day Passes (No Overnight)</h4>
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="day-full" onclick="selectVisualAccommodation('day-full')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Full Weekend Pass</h5>
+                                                        <div class="text-[10px] text-slate-400 font-medium">Commuter Option</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-xs font-bold text-sky-400">Unlimited</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-sky-400">$150</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="acc-card relative p-3.5 rounded-xl bg-slate-950 border border-slate-800 cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between" data-val="day-sat" onclick="selectVisualAccommodation('day-sat')">
+                                                    <div class="acc-check absolute top-2.5 right-2.5 text-amber-400 opacity-0 transition-opacity"><i class="fa-solid fa-circle-check"></i></div>
+                                                    <div class="pr-5">
+                                                        <h5 class="font-bold text-white text-sm mb-0.5">Saturday Only Pass</h5>
+                                                        <div class="text-[10px] text-slate-400 font-medium">Commuter Option</div>
+                                                    </div>
+                                                    <div class="flex items-end justify-between mt-3">
+                                                        <div class="flex flex-col">
+                                                            <span class="text-[9px] uppercase font-bold text-slate-500">Available</span>
+                                                            <span class="text-xs font-bold text-sky-400">Unlimited</span>
+                                                        </div>
+                                                        <span class="text-sm font-black text-amber-400">$75</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                    <!-- Hidden Select containing exact backend logic values -->
+                                    <select id="reg-room-select" onchange="handleRoomSelectChange()" class="absolute opacity-0 w-0 h-0 pointer-events-none -z-10" tabindex="-1">
+                                        <option value="" data-price="0" data-beds="1">-- Select Specific Room / Cabin / Pass --</option>
                                         <optgroup label="Standard Cabins ($190/person)">
                                             <option value="standard-powhatan" data-price="190" data-beds="1">Powhatan (Standard Cabin - $190/person)</option>
                                             <option value="standard-shoshone" data-price="190" data-beds="1">Shoshone (Standard Cabin - $190/person)</option>
@@ -1496,30 +1820,25 @@
                                             <option value="standard-wangari" data-price="190" data-beds="1">Wangari (Standard Cabin - $190/person)</option>
                                             <option value="standard-sequoia" data-price="190" data-beds="1">Sequoia (Standard Cabin - $190/person)</option>
                                         </optgroup>
-
                                         <optgroup label="Cabin Plus - Attached Restroom ($210/person)">
                                             <option value="plus-aztec" data-price="210" data-beds="1">Aztec (Cabin Plus - $210/person)</option>
                                             <option value="plus-tongva" data-price="210" data-beds="1">Tongva (Cabin Plus - $210/person)</option>
                                         </optgroup>
-
                                         <optgroup label="Witherbee Wolfe Den ($230/person)">
                                             <option value="witherbee-rm1" data-price="230" data-beds="3">Witherbee Room 1 (3 Beds - Must Reserve Full Room - $230/person)</option>
                                             <option value="witherbee-rm2" data-price="230" data-beds="1">Witherbee Room 2 (Individual Bed - $230/person)</option>
                                             <option value="witherbee-rm3" data-price="230" data-beds="1">Witherbee Room 3 (Individual Bed - $230/person)</option>
                                         </optgroup>
-
                                         <optgroup label="Semi-Private Basic - Teen Center ($260/person)">
                                             <option value="semi-basic-rm1" data-price="260" data-beds="3">Semi-Private Basic Room 1 (3 Beds - Must Reserve Full Room - $260/person)</option>
                                             <option value="semi-basic-rm2" data-price="260" data-beds="2">Semi-Private Basic Room 2 (2 Beds - Must Reserve Full Room - $260/person)</option>
                                             <option value="semi-basic-rm3" data-price="260" data-beds="2">Semi-Private Basic Room 3 (2 Beds - Must Reserve Full Room - $260/person)</option>
                                         </optgroup>
-
                                         <optgroup label="Semi-Private Plus - Main Lodge ($275/person)">
                                             <option value="semi-plus-rm1" data-price="275" data-beds="3">Semi-Private Plus Bedroom 1 (3 Beds - Must Reserve Full Room - $275/person)</option>
                                             <option value="semi-plus-rm2" data-price="275" data-beds="2">Semi-Private Plus Bedroom 2 (2 Beds - Must Reserve Full Room - $275/person)</option>
                                             <option value="semi-plus-rm3" data-price="275" data-beds="3">Semi-Private Plus Bedroom 3 (3 Beds - Must Reserve Full Room - $275/person)</option>
                                         </optgroup>
-
                                         <optgroup label="Commuter Day Passes (No Overnight)">
                                             <option value="day-full" data-price="150" data-beds="1">Full Weekend Commuter Pass ($150/person)</option>
                                             <option value="day-sat" data-price="75" data-beds="1">Saturday Only Full Day Pass ($75/person)</option>
@@ -1731,15 +2050,14 @@
         // Multi-Photo Lightbox Logic with Smart Dynamic Extension & Folder Limit Detection
         let galleryCurrentFolder = '';
         let galleryCurrentIndex = 1;
-        let galleryFolderMax = {}; // Caches detected max photos per folder: { 'Aztec': 6 }
-        let galleryFolderExt = {}; // Caches working extension per folder: { 'Aztec': 'JPG' }
+        let galleryFolderMax = {}; 
+        let galleryFolderExt = {}; 
         let currentExtIndex = 0;
 
         function openGalleryModal(title, folderPath) {
             galleryCurrentFolder = folderPath;
             galleryCurrentIndex = 1;
             
-            // Clear prior zero-cache on explicit user click so it re-verifies
             if (galleryFolderMax[folderPath] === 0) {
                 delete galleryFolderMax[folderPath];
             }
@@ -1770,7 +2088,6 @@
                 counterEl.innerText = `Photo ${galleryCurrentIndex}`;
             }
 
-            // Determine extensions order to try
             const preferredExt = galleryFolderExt[galleryCurrentFolder];
             let extsToTry = preferredExt 
                 ? [preferredExt, ...SUPPORTED_EXTENSIONS.filter(e => e !== preferredExt)]
@@ -1780,7 +2097,6 @@
 
             function tryNextExtension() {
                 if (currentExtIndex >= extsToTry.length) {
-                    // All extensions failed for this index
                     if (galleryCurrentIndex > 1) {
                         const maxFound = galleryCurrentIndex - 1;
                         galleryFolderMax[galleryCurrentFolder] = maxFound;
@@ -1811,7 +2127,7 @@
                 };
 
                 imgEl.onload = function() {
-                    galleryFolderExt[galleryCurrentFolder] = ext; // Cache working extension!
+                    galleryFolderExt[galleryCurrentFolder] = ext; 
                     imgEl.classList.remove('hidden');
                     placeholderEl.classList.add('hidden');
                 };
@@ -1825,7 +2141,7 @@
         function navigatePhoto(direction) {
             const knownMax = galleryFolderMax[galleryCurrentFolder];
             
-            if (knownMax === 0) return; // Empty folder
+            if (knownMax === 0) return; 
 
             if (knownMax) {
                 galleryCurrentIndex += direction;
@@ -1843,7 +2159,6 @@
             document.getElementById('gallery-lightbox').classList.add('hidden');
         }
 
-        // Keyboard Arrow & Escape Navigation Listener
         document.addEventListener('keydown', function(event) {
             const lightbox = document.getElementById('gallery-lightbox');
             if (lightbox && !lightbox.classList.contains('hidden')) {
@@ -1857,9 +2172,37 @@
             }
         });
 
+        // NEW: Visual Grid Accommodation Selection Logic
+        function selectVisualAccommodation(val) {
+            // Reset visual states for all cards
+            document.querySelectorAll('.acc-card').forEach(c => {
+                c.classList.remove('border-amber-400', 'bg-slate-900', 'shadow-[0_0_15px_rgba(245,158,11,0.15)]');
+                c.classList.add('border-slate-800');
+                const check = c.querySelector('.acc-check');
+                if(check) check.classList.add('opacity-0');
+            });
+            
+            // Highlight the selected card
+            const card = document.querySelector(`.acc-card[data-val="${val}"]`);
+            if (card) {
+                card.classList.remove('border-slate-800');
+                card.classList.add('border-amber-400', 'bg-slate-900', 'shadow-[0_0_15px_rgba(245,158,11,0.15)]');
+                const check = card.querySelector('.acc-check');
+                if(check) check.classList.remove('opacity-0');
+            }
+
+            // Sync with hidden select dropdown to trigger existing logic
+            const select = document.getElementById('reg-room-select');
+            select.value = val;
+            handleRoomSelectChange(); 
+        }
+
         // Room Select Price & Multi-bed Roommate Field Generator
         function handleRoomSelectChange() {
             const select = document.getElementById('reg-room-select');
+            // If nothing is selected (e.g., initial load), exit early
+            if(select.selectedIndex < 0 || select.value === "") return;
+
             const selectedOpt = select.options[select.selectedIndex];
             const price = parseFloat(selectedOpt.getAttribute('data-price')) || 0;
             const beds = parseInt(selectedOpt.getAttribute('data-beds')) || 1;
@@ -1885,7 +2228,7 @@
 
                 for (let i = 2; i <= beds; i++) {
                     html += `
-                        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-3">
+                        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-3 shadow-inner">
                             <h4 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-1.5">
                                 <i class="fa-solid fa-user-plus"></i> Person ${i} Details
                             </h4>
@@ -1955,8 +2298,11 @@
             const select = document.getElementById('reg-room-select');
             for (let i = 0; i < select.options.length; i++) {
                 if (select.options[i].value.startsWith(tierVal)) {
-                    select.selectedIndex = i;
-                    handleRoomSelectChange();
+                    // Update visual selection instead of raw index
+                    selectVisualAccommodation(select.options[i].value);
+                    
+                    // Optional: Smoothly scroll to the inventory area if invoked from a quick link
+                    document.getElementById('reg-room-select').scrollIntoView({behavior: 'smooth', block: 'center'});
                     break;
                 }
             }
@@ -2004,10 +2350,17 @@
 
         function handleRegistrationSubmit(e) {
             e.preventDefault();
+
+            // Check if accommodation was chosen visually
+            const roomSelect = document.getElementById('reg-room-select');
+            if(!roomSelect.value) {
+                alert("Please select an accommodation from the Live Inventory list.");
+                return;
+            }
+
             const primaryEmail = document.getElementById('input-email').value.trim().toLowerCase();
             const errorBanner = document.getElementById('duplicate-error-banner');
-
-            const roomSelect = document.getElementById('reg-room-select');
+            
             const selectedOpt = roomSelect.options[roomSelect.selectedIndex];
             const beds = parseInt(selectedOpt.getAttribute('data-beds')) || 1;
             const roomText = selectedOpt.text;
@@ -2103,6 +2456,15 @@
             document.getElementById('roommates-container').classList.add('hidden');
             document.getElementById('multi-room-checkboxes').classList.add('hidden');
             document.getElementById('total-price-display').innerText = '$0';
+
+            // Clear visual selection state
+            document.getElementById('reg-room-select').value = "";
+            document.querySelectorAll('.acc-card').forEach(c => {
+                c.classList.remove('border-amber-400', 'bg-slate-900', 'shadow-[0_0_15px_rgba(245,158,11,0.15)]');
+                c.classList.add('border-slate-800');
+                const check = c.querySelector('.acc-check');
+                if(check) check.classList.add('opacity-0');
+            });
         }
     </script>
 </body>
